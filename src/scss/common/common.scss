@@ -168,3 +168,15 @@ svg {
         }
     }
 }
+
+._desctop {
+    @media (max-width: 992px) {
+        display: none !important;
+    }
+}
+._mobile {
+    display: none !important;
+    @media (max-width: 992px) {
+        display: block !important;
+    }
+}
