@@ -2,7 +2,7 @@ import { isMobile } from '../utils/isMobile.js';
 import { lockPadding, unLockPadding } from '../utils/lockPadding.js';
 
 const body = document.body;
-const menu = document.querySelector('.header__bottom');
+const menu = document.querySelector('.header__bottom nav');
 const burger = document.querySelector('.header__burger');
 const menuLinks = document.querySelectorAll('.menu li a');
 const header = document.querySelector('.header');
@@ -19,24 +19,12 @@ if (burger) {
             header.classList.toggle('_sticky');
         }
 
-        if (menu.classList.contains('_open')) {
-            lockPadding();
-            setMenuTopPosition();
-        }
-        else {
-            unLockPadding()
-            resetMenuTopPosition();
-        }
+        if (menu.classList.contains('_open')) lockPadding();
+        else unLockPadding();
     })
 }
 
-function setMenuTopPosition() {
-    menu.style.top = header.getBoundingClientRect().height + 'px';
-}
 
-function resetMenuTopPosition() {
-    menu.style.top = 0;
-}
 
 if (menuLinks.length) {
     menuLinks.forEach(link => {
