@@ -6,7 +6,8 @@ body {
     scroll-behavior: smooth;
     font-style: normal;
     line-height: normal;
-    color: $black;
+    color: #fff;
+    font-family: CeraPro;
 
     &._noscroll {
         overflow: hidden;
@@ -41,6 +42,10 @@ main {
         max-width: none;
         padding-inline: $padding + px;
     }
+
+    @media (max-width: 1024px) {
+        padding-inline: 16px;
+    }
 }
 
 figure,
@@ -49,4 +54,117 @@ svg {
     display: block;
     width: 100%;
     max-width: 100%;
+}
+
+._button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    transition: all 0.3s ease 0s;
+    padding: 0 14px;
+
+    svg {
+        flex: 0 0 auto;
+        width: fit-content;
+    }
+
+    span {
+        font-family: CeraPro;
+        text-align: center;
+        font-size: 17px;
+        font-weight: 400;
+
+        @media (max-width: 768px) {
+            font-size: 15px;
+        }
+    }
+}
+
+._btn-small {
+    height: 48px;
+
+    span {
+        letter-spacing: -0.34px;
+        line-height: 140%;
+
+        @media (max-width: 768px) {
+            letter-spacing: -0.3px;
+        }
+    }
+
+    svg {
+        margin-right: 4px;
+        height: 14px;
+
+        @media (max-width: 768px) {
+            margin-right: 8px;
+        }
+    }
+}
+
+._btn-big {
+    height: 64px;
+
+    @media (max-width: 768px) {
+        height: 54px;
+    }
+
+    span {
+        line-height: 120%;
+    }
+
+    svg {
+        margin-left: 14px;
+
+        @media (max-width: 768px) {
+            height: 15px;
+            margin-right: 10px;
+        }
+    }
+}
+
+._btn-accent {
+    background-color: #1c54c7;
+
+    svg {
+        fill: #fff;
+    }
+
+    @media (any-hover: hover) {
+        &:hover {
+            background-color: #16439f;
+        }
+    }
+}
+
+._btn-white {
+    background-color: #fff;
+
+    @media (any-hover: hover) {
+        &:hover {
+            background-color: #e6e7e7;
+        }
+    }
+}
+
+._btn-black {
+    background-color: #000;
+
+    @media (any-hover: hover) {
+        &:hover {
+            background-color: #333;
+        }
+    }
+}
+
+._btn-unfill {
+    background-color: none;
+    border: 1px solid #fff;
+
+    @media (any-hover: hover) {
+        &:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+    }
 }
