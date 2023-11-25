@@ -1,10 +1,10 @@
 export const stickyHeader = () => {
     const header = document.querySelector('header');
-
     if (!header) return
 
-    const headerheigth = header.getBoundingClientRect().height;
-
+    let headerheigth = header.getBoundingClientRect().height;
+    if (window.innerWidth > 1024) headerheigth = header.getBoundingClientRect().height;
+    else headerheigth = 30;
 
     const sticky = () => {
         if (window.scrollY > headerheigth) {

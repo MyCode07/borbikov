@@ -52,11 +52,10 @@ const submenuList = document.querySelectorAll('nav ul li');
 if (submenuList.length) {
     submenuList.forEach(li => {
         const submenu = li.querySelector('ul');
+        const link = li.querySelector('a');
 
         if (submenu) {
-            const link = submenu.previousElementSibling;
             link.insertAdjacentHTML('afterend', arrow);
-
             const btn = li.querySelector('button');
 
             if (btn && isMobile.any()) {

@@ -148,12 +148,13 @@ svg {
     // ._btn-black
 
     &-black {
+        color: $white;
         background-color: $black;
         border: 0;
 
         @media (any-hover: hover) {
             &:hover {
-                background-color: rgba($color: $white, $alpha: 0.2);
+                background-color: #333333;
             }
         }
     }
