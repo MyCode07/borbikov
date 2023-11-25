@@ -1,0 +1,234 @@
+.hero {
+    background-image: url("@img/home-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+
+    @include adaptive-value("margin-bottom", 72, 40, 1);
+
+    @media (max-width: 768px) {
+        background-position: bottom right;
+        background-size: 100% 550px;
+    }
+
+    // .hero__container
+
+    &__container {
+    }
+
+    // .hero__body
+
+    &__body {
+        @include adaptive-value("padding-top", 222, 104, 1);
+        @include adaptive-value("padding-bottom", 80, 40, 1);
+
+        h1 {
+            @include adaptive-value("margin-bottom", 56, 24, 1);
+        }
+    }
+
+    // .hero__top
+
+    &__top {
+        display: flex;
+        margin-bottom: 37px;
+
+        @media (max-width: 768px) {
+            display: block;
+        }
+
+        // .hero__top-left
+
+        &-left {
+        }
+
+        // .hero__top-right
+
+        &-right {
+            position: relative;
+            flex: 1 1 auto;
+            max-width: 50%;
+
+            @media (max-width: 768px) {
+                width: 100%;
+                margin-top: 152px;
+            }
+
+            img {
+                position: absolute;
+                left: -66px;
+                bottom: -43px;
+                max-width: none;
+
+                @include adaptive-value("width", 1260, 661, 1);
+
+                @media (max-width: 768px) {
+                    left: -17px;
+                    bottom: 0;
+                }
+            }
+        }
+    }
+
+    // .hero__size
+
+    &__size {
+        position: relative;
+        z-index: 2;
+
+        span {
+            display: block;
+            @include adaptive-value("margin-bottom", 12, 7, 1);
+            font-size: 15px;
+
+            color: rgba($color: $white, $alpha: 0.6);
+        }
+
+        ol {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: auto;
+            gap: 10px 16px;
+            padding: 16px;
+            width: fit-content;
+            position: relative;
+
+            @media (max-width: 1024px) {
+                gap: 10px;
+            }
+
+            @media (max-width: 768px) {
+                display: block;
+                gap: 0;
+                width: 100%;
+
+                & > :not(:last-child) {
+                    margin-bottom: 10px;
+                }
+            }
+
+            &:before {
+                opacity: 0.4;
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                border-radius: 8px;
+                border: 1px solid transparent;
+                background: linear-gradient(90deg, rgba(248, 248, 248, 1), rgba(248, 248, 248, 0.2)) border-box;
+
+                -webkit-mask:
+                    linear-gradient($white 0 0) padding-box,
+                    linear-gradient($white 0 0);
+                mask:
+                    linear-gradient($white 0 0) padding-box,
+                    linear-gradient($white 0 0);
+                -webkit-mask-composite: destination-out;
+                mask-composite: exclude;
+            }
+
+            li {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: fit-content;
+                gap: 10px;
+                padding: 10px 17px;
+                border-radius: 8px;
+                background-color: rgba($color: $white, $alpha: 0.05);
+                color: rgba($color: $white, $alpha: 0.6);
+
+                font-size: 17px;
+                font-weight: 700;
+
+                @media (max-width: 1024px) {
+                    padding: 9.5px 12px;
+                    font-size: 15px;
+                    font-weight: 500;
+                    gap: 4px;
+                }
+
+                strong {
+                    color: $white;
+                }
+            }
+        }
+    }
+
+    // .hero__bottom
+
+    &__bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+
+        position: relative;
+        z-index: 2;
+
+        //.hero__bottom-btns
+
+        &-btns {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+
+            @media (max-width: 1024px) {
+                width: 100%;
+            }
+
+            @media (max-width: 768px) {
+                flex-direction: column;
+            }
+
+            button {
+                width: 245px;
+
+                @media (max-width: 1024px) {
+                    width: 100%;
+                }
+
+                @media (max-width: 768px) {
+                    br {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.scroll-down {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    color: rgba($color: $white, $alpha: 0.6);
+    font-size: 15px;
+
+    @media (max-width: 1024px) {
+        display: none;
+    }
+
+    * {
+        pointer-events: none;
+    }
+
+    div {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        border: 1px solid currentColor;
+    }
+
+    svg {
+        width: 17px;
+        height: 17px;
+        fill: $white;
+    }
+}

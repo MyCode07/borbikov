@@ -1,0 +1,209 @@
+.dashed {
+    background-image: url("@img/dashed-bgi.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include adaptive-value("padding-bottom", 100, 40, 1);
+
+    h2 {
+        text-align: center;
+    }
+
+    // .dashed-content
+
+    &-content {
+        position: relative;
+
+        ol {
+            @media (max-width: 1024px) {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: auto;
+                gap: 8px;
+
+                margin-top: -31px;
+            }
+
+            li {
+                position: absolute;
+                border-radius: 8px;
+                padding: 20px 24px;
+                border: 1px solid $white;
+                background-color: $black;
+                text-align: center;
+
+                color: $white;
+                font-size: 17px;
+
+                &:after {
+                    position: absolute;
+                    content: "";
+                    border: 1px dashed currentColor;
+                }
+
+                &[data-border="top,left"] {
+                    &:after {
+                        border-bottom: 0;
+                        border-right: 0;
+                    }
+                }
+
+                &[data-border="top,right"] {
+                    &:after {
+                        border-bottom: 0;
+                        border-left: 0;
+                    }
+                }
+
+                @media (max-width: 1024px) {
+                    position: relative;
+                    padding: 16px 19px;
+                    font-size: 15px;
+                    width: 100%;
+
+                    &:after {
+                        position: absolute;
+                        content: "";
+                        display: none;
+                    }
+                }
+
+                @media (max-width: 768px) {
+                    padding: 16px 12px;
+                }
+
+                strong {
+                }
+            }
+
+            & > :first-child {
+                @media (min-width: 1025px) {
+                    @include adaptive-value("top", 30, 0, 1);
+                    @include adaptive-value("right", 339, -100, 1);
+                }
+
+                &:after {
+                    width: 110px;
+                    @include adaptive-value("height", 75, 20, 1);
+                    border-top-left-radius: 5px;
+
+                    right: 100%;
+                    top: 50%;
+                }
+            }
+
+            & > :nth-child(2) {
+                @media (min-width: 1025px) {
+                    @include adaptive-value("top", 146, 40, 1);
+                    @include adaptive-value("right", 135, -200, 1);
+                }
+
+                &:after {
+                    width: 61px;
+                    height: 72px;
+
+                    @include adaptive-value("height", 72, 10, 1);
+
+                    border-top-left-radius: 5px;
+
+                    right: 100%;
+                    top: 50%;
+                }
+            }
+
+            & > :nth-child(3) {
+                @media (min-width: 1025px) {
+                    @include adaptive-value("bottom", 40, -70, 1);
+                    @include adaptive-value("right", 190, -100, 1);
+                }
+
+                &:after {
+                    width: 46px;
+                    @include adaptive-value("height", 178, 110, 1);
+
+                    border-top-right-radius: 5px;
+
+                    bottom: 100%;
+                    right: 50%;
+                }
+            }
+
+            & > :nth-child(4) {
+                @media (min-width: 1025px) {
+                    @include adaptive-value("bottom", 48, 0, 1);
+                    @include adaptive-value("left", 400, -40, 1);
+                }
+
+                &:after {
+                    width: 67px;
+
+                    @include adaptive-value("height", 132, 0, 1);
+
+                    border-top-left-radius: 5px;
+
+                    bottom: 100%;
+                    left: 50%;
+                }
+            }
+
+            & > :nth-child(5) {
+                @media (min-width: 1025px) {
+                    @include adaptive-value("bottom", 180, 0, 1);
+
+                    @include adaptive-value("left", 260, -160, 1);
+                }
+
+                &:after {
+                    width: 202px;
+                    height: 71px;
+
+                    border-top-left-radius: 5px;
+
+                    bottom: 100%;
+                    left: 50%;
+                }
+            }
+
+            & > :last-child {
+                @media (min-width: 1025px) {
+                    @include adaptive-value("top", 200, 90, 1);
+                    @include adaptive-value("left", 85, -120, 1);
+                }
+
+                &:after {
+                    height: 24px;
+
+                    @include adaptive-value("width", 139, 55, 1);
+
+                    border-top-left-radius: 5px;
+
+                    bottom: 100%;
+                    left: 50%;
+                }
+            }
+        }
+
+        // .dashed-content__img
+
+        &__img {
+            position: relative;
+            margin-left: auto;
+            margin-right: auto;
+
+            @include adaptive-value("width", 694, 250, 1);
+            @include adaptive-value("height", 694, 250, 1);
+
+            background-color: $accent-hover;
+            border-radius: 50%;
+
+            img {
+                @include adaptive-value("width", 1014, 360, 1);
+
+                max-width: unset;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+}

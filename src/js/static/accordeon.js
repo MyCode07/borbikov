@@ -26,7 +26,7 @@ export const accorden = () => {
 
         if (accordeonItems.length && window.innerWidth <= windowWidth)
             accordeonItems.forEach(item => {
-                const openBtn = item.querySelector('[data-accordion-title]')
+                const openBtn = item.querySelector('[data-accordion-item-title]')
                 
                 openBtn.addEventListener('click', function (e) {
                     toggleAccordion(item);

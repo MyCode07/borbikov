@@ -1,39 +1,30 @@
-.accordion {
-    // .accordion__item
-
-    &__item {
+[data-accordion] {
+    [data-accordion-item] {
         &[data-open] {
-            .accordion__item-content {
+            [data-accordion-item-body] {
                 grid-template-rows: 1fr;
-            }
-        }
-
-        // .accordion__item-title
-
-        &-title {
-            cursor: pointer;
-        }
-
-        // .accordion__item-content
-
-        &-content {
-            display: grid;
-            grid-template-rows: 0fr;
-            transition: grid-template-rows 0.3s;
-
-            // .accordion__item-content-height
-
-            &-height {
-                overflow: hidden;
-
-                div {
-                }
             }
         }
     }
 
-    // .accordion__open
+    [data-accordion-item-title] {
+        cursor: pointer;
 
-    &__open {
+        * {
+            pointer-events: none;
+        }
+    }
+
+    [data-accordion-item-body] {
+        display: grid;
+        grid-template-rows: 0fr;
+        transition: grid-template-rows 0.3s;
+    }
+
+    [data-accordion-item-height] {
+        overflow: hidden;
+    }
+
+    [data-accordion-item-content] {
     }
 }

@@ -90,3 +90,13 @@ if (submenuList.length) {
     }
 
 }
+
+document.addEventListener('click', function (e) {
+    let targetEl = e.target;
+
+    if ((!targetEl.closest('header nav') || (targetEl.closest('header') && targetEl.tagName == 'NAV')) && window.innerWidth > 1024) {
+        const activeMenuItems = document.querySelectorAll('nav li[data-open]');
+        if (activeMenuItems.length)
+            activeMenuItems.forEach(item => item.removeAttribute('data-open'))
+    }
+})

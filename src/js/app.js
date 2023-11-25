@@ -1,5 +1,5 @@
 // import "./static/side-fixed.js";
-// import { accorden } from "./static/accordeon.js";
+import { accorden } from "./static/accordeon.js";
 // import { maskInputs } from "./static/inputmask.js";
 // import { runTicker } from "./static/ticker.js";
 import { replaceDomElements } from "./static/replace.js";
@@ -7,16 +7,19 @@ import { replaceDomElements } from "./static/replace.js";
 // import { stickyHeader } from "./parts/header.js";
 
 import "./parts/menu.js";
-// import "./parts/header.js";
+import "./parts/read-more.js";
 // import "./parts/animations.js";
 // import "./parts/mobile-controll.js";
 // import "./parts/login.js";
 // import "./parts/category-scroll.js";
-// import "./parts/sliders.js";
+import "./parts/sliders.js";
+import { scrollDown } from "./parts/scroll-down.js";
+import { stickyHeader } from "./parts/header.js";
 
-// stickyHeader()
+stickyHeader()
 // toTop();
 replaceDomElements();
 // runTicker()
-// accorden();
+accorden();
+scrollDown();
 // maskInputs('+7 999 999 999 999', '.phone')

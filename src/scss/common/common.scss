@@ -5,9 +5,10 @@ html {
 body {
     scroll-behavior: smooth;
     font-style: normal;
-    line-height: normal;
-    color: #fff;
+    line-height: 1.4;
     font-family: "CeraPro";
+
+    color: $white;
     background-color: $black;
 
     &._noscroll {
@@ -57,7 +58,7 @@ svg {
     max-width: 100%;
 }
 
-._button {
+._btn {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -65,36 +66,24 @@ svg {
     transition: all 0.3s ease 0s;
     padding: 0 14px;
 
+    text-align: center;
+    font-size: 17px;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+
+    height: 48px;
+
+    color: $black;
+    border: 1px solid currentColor;
+
+    @media (max-width: 768px) {
+        font-size: 15px;
+    }
+
+    img,
     svg {
         flex: 0 0 auto;
         width: fit-content;
-    }
-
-    span {
-        font-family: CeraPro;
-        text-align: center;
-        font-size: 17px;
-        font-weight: 400;
-
-        @media (max-width: 768px) {
-            font-size: 15px;
-        }
-    }
-}
-
-._btn-small {
-    height: 48px;
-
-    span {
-        letter-spacing: -0.34px;
-        line-height: 140%;
-
-        @media (max-width: 768px) {
-            letter-spacing: -0.3px;
-        }
-    }
-
-    svg {
         margin-right: 4px;
         height: 14px;
 
@@ -102,82 +91,257 @@ svg {
             margin-right: 8px;
         }
     }
-}
 
-._btn-big {
-    height: 64px;
+    // ._btn-big
 
-    @media (max-width: 768px) {
-        height: 54px;
-    }
-
-    span {
-        line-height: 120%;
-    }
-
-    svg {
-        margin-left: 14px;
+    &-big {
+        height: 64px;
+        line-height: 1.2;
+        padding: 0 32px;
 
         @media (max-width: 768px) {
-            height: 15px;
-            margin-right: 10px;
+            height: 54px;
+        }
+
+        svg {
+            margin-left: 14px;
+
+            @media (max-width: 768px) {
+                height: 15px;
+                margin-right: 10px;
+            }
         }
     }
-}
 
-._btn-accent {
-    background-color: #1c54c7;
+    // ._btn-accent
 
-    svg {
-        fill: #fff;
-    }
+    &-accent {
+        background-color: $accent;
+        border: 0;
+        color: $white;
 
-    @media (any-hover: hover) {
-        &:hover {
-            background-color: #16439f;
+        svg {
+            fill: currentColor;
+        }
+
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: $accent-hover;
+            }
         }
     }
-}
 
-._btn-white {
-    background-color: #fff;
+    // ._btn-white
 
-    @media (any-hover: hover) {
-        &:hover {
-            background-color: #e6e7e7;
+    &-white {
+        background-color: $white;
+        color: $black;
+        border: 0;
+
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: $gray;
+            }
         }
     }
-}
 
-._btn-black {
-    background-color: #000;
+    // ._btn-black
 
-    @media (any-hover: hover) {
-        &:hover {
-            background-color: #333;
+    &-black {
+        background-color: $black;
+        border: 0;
+
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: rgba($color: $white, $alpha: 0.2);
+            }
         }
     }
-}
 
-._btn-unfill {
-    background-color: none;
-    border: 1px solid #fff;
+    // ._btn-unfill
 
-    @media (any-hover: hover) {
-        &:hover {
-            background: rgba(255, 255, 255, 0.2);
+    &-unfill {
+        background-color: transparent;
+        color: $white;
+
+        @media (any-hover: hover) {
+            &:hover {
+                background: rgba($color: $white, $alpha: 0.2);
+            }
         }
     }
 }
 
 ._desctop {
-    @media (max-width: 992px) {
+    @media (max-width: 1024px) {
         display: none !important;
     }
 }
+
 ._mobile {
     display: none !important;
-    @media (max-width: 992px) {
+
+    @media (max-width: 1024px) {
         display: block !important;
+    }
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+}
+
+h1 {
+    @include adaptive-value("font-size", 54, 28, 1);
+}
+
+h2 {
+    @include adaptive-value("font-size", 48, 26, 1);
+}
+
+h3 {
+    @include adaptive-value("font-size", 24, 18, 1);
+}
+
+._text {
+    color: rgba($color: $black, $alpha: 0.8);
+    @include adaptive-value("font-size", 20, 15, 1);
+    line-height: 1.5;
+}
+
+._label-block {
+    label {
+        display: block;
+        color: rgba($color: $light-gray, $alpha: 0.6);
+
+        font-size: 15px;
+
+        letter-spacing: 0.01em;
+        margin-bottom: 4px;
+
+        @media (max-width: 768px) {
+            font-size: 13px;
+        }
+    }
+
+    span {
+        font-size: 20px;
+
+        @media (max-width: 768px) {
+            font-size: 15px;
+        }
+    }
+
+    a {
+        &:has(img, svg) {
+            display: flex;
+            align-items: center;
+
+            img,
+            svg {
+                width: 0.9em;
+                height: 0.9em;
+                margin-right: 8px;
+                flex: 0 0 auto;
+                fill: currentColor;
+            }
+        }
+    }
+}
+
+.prev,
+.next {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease 0s;
+
+    width: 52px;
+    height: 52px;
+
+    @media (max-width: 768px) {
+        width: 48px;
+        height: 48px;
+    }
+
+    border-radius: 8px;
+    border: 1px solid $white;
+    background: $black;
+
+    img,
+    svg {
+        width: 20px;
+        fill: $white;
+        transition: all 0.3s ease 0s;
+    }
+}
+
+.prev {
+    img,
+    svg {
+        transform: rotate(-180deg);
+    }
+}
+
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    margin-top: 24px;
+
+    &:not(.swiper-pagination-fraction) {
+        span {
+            background-color: $white;
+            opacity: 0.2;
+            width: 8px;
+            height: 8px;
+            flex: 0 0 auto;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: opacity 0.3s ease 0s;
+
+            &.swiper-pagination-bullet-active {
+                opacity: 1;
+            }
+        }
+
+        &._blue {
+            span {
+                background-color: $accent;
+            }
+        }
+    }
+
+    &.swiper-pagination-fraction {
+        gap: 2px;
+
+        span {
+            font-size: 17px;
+            font-weight: 700;
+            line-height: 1.15;
+            letter-spacing: -0.02em;
+
+            @media (max-width: 768px) {
+                font-size: 15px;
+            }
+        }
+
+        &._blue {
+            color: $accent;
+        }
+    }
+}
+
+._more {
+    @include adaptive-value("margin-top", 60, 36, 1);
+    width: 100%;
+
+    svg {
+        fill: currentColor;
     }
 }
