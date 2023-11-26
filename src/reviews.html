@@ -1,0 +1,189 @@
+@@include('./html/head.html', {
+"title":"Отзывы",
+})
+
+@@include('./html/header.html', {
+"text":"Отзывы",
+})
+
+<main>
+
+    <section class="section hero-reviews">
+        <div class="section__container _container">
+            <div class="section__body">
+                <div class="section__top">
+                    <h1>Отзывы</h1>
+                    <div class="section__top-flex">
+                        <p>Посмотреть или оставить отзыв на наших других площадках</p>
+                        <div>
+                            <button class="_btn _btn-big _btn-accent">Оставить отзыв</button>
+                        </div>
+                    </div>
+                </div>
+                <ol>
+                    <li>
+                        <a href="">
+                            <img src="img/ozon.png" alt="">
+                        </a>
+                        <span>Рейтинг</span>
+                        <img class="review-card__rating" src="img/icons/review-stars.svg" alt="">
+                    </li>
+                    <li class="_center">
+                        <a href="">
+                            <img src="img/yandex.png" alt="">
+                        </a>
+                        <span>Рейтинг</span>
+                        <label>4,8 из 5</label>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="img/google.png" alt="">
+                        </a>
+                        <span>Рейтинг</span>
+                        <label>4,8 из 5</label>
+                    </li>
+                </ol>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="section reviews-page">
+        <div class="section__container _container">
+            <div class="section__body">
+                <div class="section__top">
+                    <h2>Нам можно доверять</h2>
+                    <div class="section__top-flex">
+                        <p>У нас работают сертифицированные специалисты международного уровня</p>
+                    </div>
+                </div>
+                <div class="reviews-page__flex"  data-replace-width="768">
+                    <div class="reviews-page__card">
+                        <svg class="reviews-icon" viewBox="0 0 86 64" data-replace-element>
+                            <use xlink:href="@img/svg/icons.svg#reviwes-icon" />
+                        </svg>
+                        <div class="reviews-page__box" data-replace-old-position="beforebegin">
+                            <ol>
+                                <li class="reviews-page__top">
+                                    <div class="reviews-page__person">
+                                        <div data-replace-new-position="beforebegin">
+                                            <label>Наталья Светличная</label>
+                                            <span>Предприниматель</span>
+                                        </div>
+                                    </div>
+                                    <div class="reviews-page__data">
+                                        <span class="data">21 ноября 2023</span>
+                                        <img src="img/icons/review-stars.svg" alt="">
+                                    </div>
+                                </li>
+                                <li>
+                                    <span>Услуга</span>
+                                    <h5>Ремонт капота Mitsubishi</h5>
+                                </li>
+                                <li>
+                                    <span>Комментарий</span>
+                                    <p>Кто-то сбросил из окна горшок с цветами на капот, стоящей рядом с домов моей
+                                        машины.
+                                        Через 2 дня мне позвонили и
+                                        сказали, что машина готова. Приехала и увидела абсолютно выправленный капот.
+                                        Такое
+                                        качество и скорость меня поразили.</p>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="reviews-page__card"  data-replace-width="768">
+                        <svg class="reviews-icon" viewBox="0 0 86 64" data-replace-element>
+                            <use xlink:href="@img/svg/icons.svg#reviwes-icon" />
+                        </svg>
+                        <div class="reviews-page__box" data-replace-old-position="beforebegin">
+                            <ol>
+                                <li class="reviews-page__top">
+                                    <div class="reviews-page__person">
+                                        <div data-replace-new-position="beforebegin">
+                                            <label>Наталья Светличная</label>
+                                            <span>Предприниматель</span>
+                                        </div>
+                                    </div>
+                                    <div class="reviews-page__data">
+                                        <span class="data">21 ноября 2023</span>
+                                        <img src="img/icons/review-stars.svg" alt="">
+                                    </div>
+                                </li>
+                                <li>
+                                    <span>Услуга</span>
+                                    <h5>Ремонт капота Mitsubishi</h5>
+                                </li>
+                                <li>
+                                    <span>Комментарий</span>
+                                    <p>Кто-то сбросил из окна горшок с цветами на капот, стоящей рядом с домов моей
+                                        машины.
+                                        Через 2 дня мне позвонили и
+                                        сказали, что машина готова. Приехала и увидела абсолютно выправленный капот.
+                                        Такое
+                                        качество и скорость меня поразили.</p>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                <button class="_btn _btn-unfill _btn-big _more">Показать еще</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="section form calculator review-form" data-replace-width="768">
+        <div class="section__container _container">
+            <div class="section__body">
+                <div class="section__top">
+                    <div class="section__top-flex">
+                        <h2 data-replace-old-position="beforeend">Оставьте ваш отзыв</h2>
+                        <img data-replace-element src="img/icons/review-stars.svg" alt="">
+                    </div>
+                    <div data-replace-new-position="beforeend">
+                        <p>Поделитесь опытом посещения Bobrikov Brothers.</p>
+                    </div>
+                </div>
+
+                <form action="#">
+                    <div class="form__flex">
+                        <div class="form__flex-top">
+                            <div class="form__item">
+                                <input type="text" placeholder="Введите имя*">
+                            </div>
+                            <div class="form__item">
+                                <input type="text" class="_phone-mask" placeholder="Номер телефона*">
+                            </div>
+                            <div class="form__item">
+                                <input type="email" placeholder="Услуга">
+                            </div>
+                        </div>
+                        <div class="form__flex-bottom">
+                            <div class="form__item">
+                                <textarea placeholder="Ваш отзыв..."></textarea>
+                            </div>
+                            <div class="form__item">
+                                <div class="form__upload">
+                                    <div>Загрузить фото</div>
+                                    <span>
+                                        Перетащите файлы сюда. Размер: не более
+                                        <span class="form__upload-maxsize">20</span> MB
+                                    </span>
+                                    <input type="file">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form__send">
+                        <input type="submit" value="Отправить" class="_btn _btn-big _btn-black">
+                        <p>Нажимая кнопку "Отправить", Вы соглашаетесь с условиями обработки персональных
+                            данных.</p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+</main>
+
+@@include('./html/footer.html')
+@@include('./html/scripts.html')

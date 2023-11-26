@@ -1,0 +1,105 @@
+@@include('./html/head.html', {
+"title":"Наши работы",
+})
+
+@@include('./html/header.html', {
+"text":"Наши работы",
+})
+
+<main>
+
+    <section class="section hero-works" data-replace-width="768">
+        <div class="section__container _container">
+            <div class="section__body">
+                <div class="section__top">
+                    <h1>Наши работы</h1>
+                    <button class="_btn  _btn-unfill filter">Показывать: Все работы
+                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="5" viewBox="0 0 10 5" fill="none">
+                            <path
+                                d="M5.42922 4.83709L9.32427 1.29221C9.43758 1.1871 9.5 1.04677 9.5 0.897152C9.5 0.74753 9.43758 0.607207 9.32427 0.50209L8.96387 0.167391C8.72902 -0.0503998 8.34733 -0.0503999 8.11285 0.167391L5.00228 2.98384L1.88715 0.163156C1.77384 0.0580385 1.6228 -3.44324e-07 1.46173 -3.51364e-07C1.30049 -3.58412e-07 1.14944 0.0580384 1.03604 0.163156L0.67573 0.497855C0.562422 0.603055 0.5 0.743295 0.5 0.892917C0.5 1.04254 0.562422 1.18286 0.67573 1.28798L4.57525 4.83709C4.68892 4.94246 4.84068 5.00033 5.00201 5C5.16397 5.00033 5.31564 4.94246 5.42922 4.83709Z"
+                                fill="white" />
+                        </svg>
+                    </button>
+                    <div class="section__top-flex">
+                        <button class="_active">Все работы</button>
+                        <button class="">Удаление вмятин</button>
+                        <button class="">Полировка</button>
+                        <button class="">Удаление царапин</button>
+                        <button class="">Локальный ремонт</button>
+
+                    </div>
+                </div>
+                <div class="swiper" data-replace-old-position="afterbegin">
+                    <div class="works-control" data-replace-element>
+                        <button class="prev">
+                            <svg width="20" height="14" viewBox="0 0 20 14">
+                                <use xlink:href='img/svg/icons.svg#slider-arrow' />
+                            </svg>
+                        </button>
+                        <button class="next">
+                            <svg width="20" height="14" viewBox="0 0 20 14">
+                                <use xlink:href='img/svg/icons.svg#slider-arrow' />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="work-slide">
+                                <div>
+                                    <span>До</span>
+                                    <img loading="lazy" src="@img/1x1.png" srcset="@img/work-slide-before.png" alt="">
+                                </div>
+                                <div>
+                                    <span>После</span>
+                                    <img loading="lazy" src="@img/1x1.png" srcset="@img/work-slide-after.png" alt="">
+                                </div>
+                            </div>
+                            <div class="swiper-lazy-preloader"></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="work-slide">
+                                <div>
+                                    <span>До</span>
+                                    <img loading="lazy" src="@img/1x1.png" srcset="@img/work-slide-before.png" alt="">
+                                </div>
+                                <div>
+                                    <span>После</span>
+                                    <img loading="lazy" src="@img/1x1.png" srcset="@img/work-slide-after.png" alt="">
+                                </div>
+                            </div>
+                            <div class="swiper-lazy-preloader"></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="work-slide">
+                                <div>
+                                    <span>До</span>
+                                    <img loading="lazy" src="@img/1x1.png" srcset="@img/work-slide-before.png" alt="">
+                                </div>
+                                <div>
+                                    <span>После</span>
+                                    <img loading="lazy" src="@img/1x1.png" srcset="@img/work-slide-after.png" alt="">
+                                </div>
+                            </div>
+                            <div class="swiper-lazy-preloader"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="works-pagination" data-replace-new-position="afterbegin">
+                    <label>До</label>
+                    <div class="pagination"></div>
+                    <label>После</label>
+                </div>
+
+                <button class="_btn _btn-big _btn-unfill _more">Показать еще</button>
+            </div>
+        </div>
+    </section>
+
+    @@include('./html/parts/calculator.html')
+
+    @@include('./html/parts/map.html')
+
+</main>
+
+@@include('./html/footer.html')
+@@include('./html/scripts.html')

@@ -1,0 +1,162 @@
+.polirovka-dashed {
+    background-image: url("@img/dashed-bgi.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include adaptive-value("margin-bottom", -50, 60, 1);
+    @include adaptive-value("padding-bottom", 148, 0, 1);
+
+    h2 {
+        text-align: center;
+    }
+
+    .dashed-content {
+        ol {
+            li {
+                background-color: #000;
+
+                &[data-border="top,left"] {
+                    &:after {
+                        border-bottom: 0;
+                        border-right: 0;
+                    }
+                }
+
+                &[data-border="top,right"] {
+                    &:after {
+                        border-bottom: 0;
+                        border-left: 0;
+                    }
+                }
+
+                @media (max-width: 1024px) {
+                    padding-left: 0;
+                    padding-right: 0;
+                }
+            }
+
+            & > :first-child {
+                @media (min-width: 1025px) {
+                    @include adaptive-value("top", 48, 0, 1);
+                    @include adaptive-value("right", 570, 0, 1);
+                }
+
+                &:after {
+                    @include adaptive-value("height", 111, 20, 1);
+                    @include adaptive-value("width", 87, -50, 1);
+                    border-top-right-radius: 5px;
+                    border-top-left-radius: 0px;
+
+                    left: 100%;
+                    top: 50%;
+                }
+
+                @media (max-width: 1024px) {
+                    grid-row-start: 4;
+                    grid-column: span 2;
+                }
+            }
+
+            & > :nth-child(2) {
+                @media (min-width: 1025px) {
+                    @include adaptive-value("top", 145, 40, 1);
+                    @include adaptive-value("right", 110, -200, 1);
+                }
+
+                &:after {
+                    width: 43px;
+                    height: 61px;
+
+                    @include adaptive-value("height", 72, 10, 1);
+                    border-top-left-radius: 5px;
+
+                    right: 100%;
+                    top: 50%;
+                }
+            }
+
+            & > :nth-child(3) {
+                @media (min-width: 1025px) {
+                    @include adaptive-value("bottom", 40, -70, 1);
+                    @include adaptive-value("right", 190, -200, 1);
+                }
+
+                &:after {
+                    width: 46px;
+                    @include adaptive-value("height", 178, 110, 1);
+
+                    border-top-right-radius: 5px;
+
+                    bottom: 100%;
+                    right: 50%;
+                }
+            }
+
+            & > :nth-child(4) {
+                @media (min-width: 1025px) {
+                    @include adaptive-value("bottom", 45, 0, 1);
+                    @include adaptive-value("left", 610, 100, 1);
+                }
+
+                &:after {
+                    width: 42px;
+
+                    @include adaptive-value("height", 129, 0, 1);
+
+                    border-top-right-radius: 5px;
+                    border-top-left-radius: 0px;
+
+                    bottom: 100%;
+                    left: 50%;
+                }
+            }
+
+            & > :nth-child(5) {
+                @media (min-width: 1025px) {
+                    @include adaptive-value("bottom", 133, 0, 1);
+                    @include adaptive-value("left", 350, 0, 1);
+                }
+
+                &:after {
+                    width: 37px;
+                    height: 122px;
+
+                    border-top-left-radius: 5px;
+
+                    bottom: 100%;
+                    left: 50%;
+                }
+            }
+
+            & > :nth-child(6) {
+                @media (min-width: 1025px) {
+                    @include adaptive-value("bottom", 240, 0, 1);
+                    @include adaptive-value("left", 50, 0, 1);
+                }
+
+                &:after {
+                    width: 142px;
+                    height: 78px;
+
+                    border-top-left-radius: 5px;
+                    bottom: 100%;
+                    left: 50%;
+                }
+            }
+
+            & > :last-child {
+                @media (min-width: 1025px) {
+                    @include adaptive-value("top", 97, 0, 1);
+                    @include adaptive-value("left", 172, -100, 1);
+                }
+
+                &:after {
+                    height: 100px;
+                    width: 1px;
+                    border-top-left-radius: 5px;
+                    top: 100%;
+                    left: 50%;
+                }
+            }
+        }
+    }
+}

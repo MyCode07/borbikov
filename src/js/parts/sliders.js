@@ -125,5 +125,80 @@ if (sliders.length) {
                 }
             })
         }
+        else if (section.classList.contains('services-slider')) {
+            new Swiper(slider, {
+                modules: [
+                    Navigation, Pagination
+                ],
+
+                slidesPerView: 3,
+                spaceBetween: 39,
+
+                navigation: {
+                    prevEl: prev,
+                    nextEl: next,
+                },
+
+                pagination: {
+                    el: pagination,
+                    clickable: true
+                },
+
+                breakpoints: {
+                    320: {
+                        slidesPerView: 1,
+                    },
+
+                    425: {
+                        slidesPerView: 2,
+                    },
+
+                    768: {
+                        slidesPerView: 3,
+                    },
+
+                }
+            })
+        }
+        else if (section.classList.contains('hero-about')) {
+            new Swiper(slider, {
+                modules: [
+                    Pagination
+                ],
+                slidesPerView: 1,
+                spaceBetween:16,
+
+                pagination: {
+                    el: pagination,
+                    clickable: true
+                },
+                on: {
+                    resize: (swiper) => {
+                        if (window.innerWidth <= 768) swiper.init()
+                        else swiper.destroy()
+                    },
+                    init: (swiper) => {
+                        if (window.innerWidth <= 768) swiper.init()
+                        else swiper.destroy()
+                    }
+                },
+
+                breakpoints: {
+                    320: {
+                        slidesPerView: 1.5,
+                        spaceBetween: 16,
+                        centeredSlides: true,
+                    },
+
+                    425: {
+                        slidesPerView: 2,
+                    },
+
+                    768: {
+                        slidesPerView: 3,
+                    }
+                }
+            })
+        }
     })
 }

@@ -1,0 +1,59 @@
+@@include('./html/head.html', {
+"title":"Контакты",
+})
+
+@@include('./html/header.html', {
+"text":"Контакты",
+})
+
+<main>
+
+    <section class="section contacts">
+        <div class="section__container _container">
+            <div class="section__body">
+                <div class="section__top">
+                    <h1>Контакты</h1>
+                </div>
+                <div class="section__bottom">
+                    <div>
+                        <span>Режим работы</span>
+                        <label>Пн-Сб: 10:00-21:00</label>
+                    </div>
+                    <div>
+                        <span>Телефон</span>
+                        <a href="">
+                            <svg viewBox="0 0 15 15">
+                                <use xlink:href="img/svg/icons.svg#tel"></use>
+                            </svg>
+                            <label>8 (930) 940-27-11</label>
+                        </a>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <section class="section map contacts-map">
+        <div class="section__container _container">
+            <div class="section__body">
+                <div class="map">
+                    <img src="@img/map.png" alt="">
+                </div>
+            </div>
+            <div class="section__bottom">
+                <p>
+                    <svg width="12" height="16" viewBox="0 0 12 16">
+                        <use xlink:href="@img/svg/icons.svg#location"></use>
+                    </svg>
+                    Варшавское шоссе 97 (Подземный паркинг ТЦ "Ритейл Парк")
+                </p>
+                <a href="" target="_blank" class="_btn _btn-big _btn-accent">Проложить маршрут</a>
+            </div>
+        </div>
+    </section>
+
+    @@include('./html/parts/calculator.html')
+
+</main>
+
+@@include('./html/footer.html')
+@@include('./html/scripts.html')

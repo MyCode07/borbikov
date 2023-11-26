@@ -1,0 +1,79 @@
+@@include('./html/head.html', {
+"title":"О нас",
+})
+
+@@include('./html/header.html', {
+"text":"О нас",
+})
+
+<main>
+
+    <section class="hero hero-about">
+        <div class="hero__container _container">
+            <div class="hero__body">
+                <div class="hero__top">
+                    <h1>Наша команда</h1>
+                </div>
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="about-card">
+                                <img src="img/about/about-1.png" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="about-card">
+                                <img src="img/about/about-2.png" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="about-card">
+                                <img src="img/about/about-3.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section about-info">
+        <div class="section__container _container">
+            <div class="section__body">
+                <div class="section__top">
+                    <h2>Мы в цифрах</h2>
+                    <p>Можете спать спокойно, если ваш автомобиль в наших руках</p>
+                </div>
+                <ol>
+                    <li>
+                        <span>21 <label>ГОД</label> </span>
+                        <p>Работаем для вас</p>
+                    </li>
+                    <li class="_center">
+                        <span>250+</span>
+                        <p>Оценок на Яндекс.Карты</p>
+                    </li>
+                    <li>
+                        <span>5,0</span>
+                        <p>Рейтинг на Яндекс.Карты</p>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </section>
+
+    @@include('./html/parts/why.html')
+
+    @@include('./html/parts/trust.html')
+
+    @@include('./html/parts/faq.html')
+
+    @@include('./html/parts/calculator.html')
+
+    @@include('./html/parts/map.html')
+
+</main>
+
+@@include('./html/footer.html')
+@@include('./html/scripts.html')

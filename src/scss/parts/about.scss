@@ -1,0 +1,103 @@
+.about-info {
+    @include adaptive-value("margin-bottom", 60, 32, 1);
+
+    h2 {
+        margin-bottom: 12px !important;
+    }
+
+    .section__body {
+        background-color: $accent;
+        border-radius: 20px;
+        @include adaptive-value("padding-top", 60, 24, 1);
+        @include adaptive-value("padding-bottom", 73, 40, 1);
+
+        @media (max-width: 768px) {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    }
+
+    .section__top {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        text-align: center;
+
+        @media (max-width: 768px) {
+            align-items: flex-start;
+            text-align: left;
+        }
+
+        p {
+            margin: 0 !important;
+        }
+    }
+
+    ol {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+            align-items: flex-start;
+
+            & > :not(:last-child) {
+                margin-bottom: 28px;
+            }
+        }
+
+        & > :first-child {
+            @media (min-width: 769px) {
+                @include adaptive-value("padding-right", 80, 0, 1);
+            }
+        }
+
+        & > :last-child {
+            @media (min-width: 769px) {
+                @include adaptive-value("padding-left", 80, 0, 1);
+            }
+        }
+
+        ._center {
+            @media (min-width: 769px) {
+                @include adaptive-value("padding-left", 80, 0, 1);
+                @include adaptive-value("padding-right", 80, 0, 1);
+                border-right: 1px solid rgba($color: $white, $alpha: 0.2);
+                border-left: 1px solid rgba($color: $white, $alpha: 0.2);
+            }
+        }
+
+        li {
+            span {
+                display: block;
+                @include adaptive-value("margin-bottom", 20, 10, 1);
+                @include adaptive-value("font-size", 96, 48, 1);
+                @include adaptive-value("letter-spacing", -1.92, -0.96, 1);
+                line-height: 1;
+                color: $white;
+                font-weight: 700;
+            }
+
+            label {
+                color: $white;
+                font-weight: 700;
+                @include adaptive-value("font-size", 24, 32, 1);
+                @include adaptive-value("letter-spacing", -0.48, -0.64, 1);
+            }
+
+            p {
+                display: block;
+                color: rgba($color: $white, $alpha: 0.8);
+                text-align: center;
+                font-size: 15px;
+
+                @media (max-width: 768px) {
+                    text-align: left;
+                }
+            }
+        }
+    }
+}

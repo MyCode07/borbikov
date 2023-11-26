@@ -1,0 +1,105 @@
+@@include('./html/head.html', {
+"title":"Полировка",
+})
+
+@@include('./html/header.html', {
+"text":"Полировка",
+})
+
+<main>
+
+    <section class="hero hero-polirovka">
+        <div class="hero__container _container">
+            <div class="hero__body">
+                <div class="hero__top">
+                    <div class="hero__top-left">
+                        <h1 data-animate data-animate-bottom data-delay="0.3">Полировка кузова <br> автомобиля в Москве
+                        </h1>
+                        <div class="hero__btns">
+                            <button class="_btn _btn-big _btn-accent">Записаться на оценку <br> бесплатно</button>
+                            <button class="_btn  _btn-big _btn-unfill">Оценить стоимость <br> ремонта по фото</button>
+                        </div>
+                        <div class="hero__info">
+                            <li>от 30 минут <label>—</label> <strong> от 1000 ₽</strong></li>
+                        </div>
+                    </div>
+                    <div class="hero__top-right" data-animate data-animate-right>
+                        <img src="img/polirovka-hero-car.png" alt="">
+                    </div>
+                </div>
+                <div class="hero__bottom" data-animate data-animate-bottom data-delay="0.4">
+                    <button class="scroll-down">
+                        <div>
+                            <svg viewBox="0 0 7 18">
+                                <use xlink:href="@img/svg/icons.svg#arrow-down" />
+                            </svg>
+                        </div>
+                        <span>Больше услуг дальше</span>
+                    </button>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    @@include('./html/parts/services.html', {"title": "Виды полировки"})
+
+    <section class="section polirovka-dashed">
+        <div class="section__container _container">
+            <div class="section__body">
+                <div class="section__top">
+                    <h2>Направления полировки</h2>
+                </div>
+                <div class="dashed-content">
+                    <div class="dashed-content__img">
+                        <img src="img/dashed-car.png" alt="">
+                    </div>
+                    <ol>
+                        <li data-border="top,right">
+                            Полировка лобового стекла
+                        </li>
+                        <li data-border="top,left">
+                            Полировка капота
+                        </li>
+                        <li data-border="top,right">
+                            Полировка бампера
+                        </li>
+                        <li data-border="top,right">
+                            Полировка дисков
+                        </li>
+                        <li data-border="top,left">
+                            Полировка двери
+                        </li>
+                        <li data-border="top,left">
+                            Полировка крыла
+                        </li>
+                        <li data-border="top,left">
+                            Полировка фар
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    @@include('./html/parts/price.html')
+
+
+    @@include('./html/parts/marks.html')
+
+    @@include('./html/parts/works.html')
+
+    @@include('./html/parts/text.html')
+
+
+    @@include('./html/parts/faq.html')
+
+    @@include('./html/parts/calculator.html')
+
+
+    @@include('./html/parts/map.html')
+
+</main>
+
+@@include('./html/footer.html')
+@@include('./html/scripts.html')

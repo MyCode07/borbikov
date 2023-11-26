@@ -225,6 +225,101 @@
     @include adaptive-value("margin-bottom", 100, 60, 1);
 }
 
+.services-slider {
+    @include adaptive-value("margin-bottom", 100, 60, 1);
+
+    .section__body {
+        position: relative;
+    }
+
+    .section__top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        button {
+            width: 152px;
+
+            @media (max-width: 1024px) {
+                display: none;
+            }
+        }
+    }
+
+    .service-card__bottom {
+        flex-direction: column;
+        align-items: flex-start;
+
+        @media (max-width: 768px) {
+            flex-direction: row;
+        }
+
+        h3 {
+            padding: 0;
+            @include adaptive-value("margin-bottom", 40, 0, 1);
+            margin-inline: 0;
+            margin-left: 0;
+            max-width: unset;
+
+            @media (max-width: 768px) {
+                margin-right: 20px;
+            }
+        }
+
+        button {
+            @media (max-width: 768px) {
+                display: none;
+            }
+        }
+
+        .next {
+            flex: 0 0 auto;
+            @media (min-width: 769px) {
+                display: none;
+            }
+        }
+    }
+
+    .service-card__img {
+        @include adaptive-value("height", 200, 132, 1);
+    }
+
+    .works-control {
+        z-index: 2;
+        left: -2%;
+        top: 36%;
+        width: calc(100% + 52px);
+
+        @media (max-width: 1024px) {
+            display: none;
+        }
+    }
+
+    .pagination {
+        @media (min-width: 1024px) {
+            display: none;
+        }
+    }
+
+    .swiper-slide {
+        min-width: 316px;
+    }
+
+    ._label {
+        gap: 10px;
+
+        strong {
+            opacity: 0.6;
+        }
+    }
+
+    ._more {
+        @media (min-width: 1024px) {
+            display: none;
+        }
+    }
+}
+
 .steps {
     @include adaptive-value("margin-bottom", 100, 60, 1);
 
@@ -588,7 +683,13 @@ section.form {
     }
 }
 
+.contacts-map {
+    @include adaptive-value("margin-bottom", 84, 44, 1);
+}
+
 .text {
+    @include adaptive-value("margin-bottom", 100, 48, 1);
+
     &-content {
         font-size: 20px;
         letter-spacing: 0.02em;
