@@ -1,10 +1,83 @@
-<div class="popup" id="popup">
+<div class="popup call" id="popup">
     <div class="popup__container _container">
+
         <div class="popup__body">
             <button class="popup__close" href="#">
-                <img src="@img/svg/close.svg" alt="">
+                <svg viewBox="0 0 35 34">
+                    <use xlink:href="@img/svg/icons.svg#close" />
+                </svg>
             </button>
-            <div class="popup__content"></div>
+            <div class="popup__content">
+                <label>Заказать звонок</label>
+                <form class="form" action="#">
+                    <div class="form__row">
+                        <div data-required class="form__item">
+                            <input type="text" name="name" value="" placeholder="Введите имя">
+                        </div>
+                        <div data-required class="form__item">
+                            <input type="number" name="name" value="" placeholder="+7 (999) ___-__-__">
+                        </div>
+                    </div>
+                    <div class="form__button">
+                        <button class="_btn _btn-accent _btn-big">Отправить</button>
+                        <p>Нажимая на кнопку, вы даете согласие на обработку персональных данных</p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="popup calc" id="popup">
+    <div class="popup__container _container">
+
+        <div class="popup__body">
+            <button class="popup__close" href="#">
+                <svg viewBox="0 0 35 34">
+                    <use xlink:href="@img/svg/icons.svg#close" />
+                </svg>
+            </button>
+            <div class="popup__content">
+                <label>Оценить стоимость ремонта</label>
+                <form action="#">
+                    <div class="form__flex">
+                        <div class="form__flex-left">
+                            <div class="form__item">
+                                <input type="text" placeholder="Введите имя">
+                            </div>
+                            <div class="form__item">
+                                <input type="text" class="_phone-mask" placeholder="Номер телефона*">
+                            </div>
+                            <div class="form__item">
+                                <input type="email" placeholder="Электронная почта*">
+                            </div>
+                            <div class="form__item">
+                                <input type="text" placeholder="Модель и марка авто">
+                            </div>
+                        </div>
+                        <div class="form__flex-right">
+                            <div class="form__item">
+                                <textarea placeholder="Сообщение..."></textarea>
+                            </div>
+                            <div class="form__item">
+                                <div class="form__upload">
+                                    <div>Загрузить фото</div>
+                                    <span>
+                                        Перетащите файлы сюда. Размер: не более
+                                        <span class="form__upload-maxsize">20</span> MB
+                                    </span>
+                                    <input type="file">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form__send">
+                        <input type="submit" value="Рассчитать стоимость" class="_btn _btn-big _btn-accent">
+                        <p>Нажимая кнопку "Рассчитать стоимость", Вы соглашаетесь с условиями обработки персональных
+                            данных.</p>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
 </div>
