@@ -145,15 +145,15 @@ if (sliders.length) {
                 },
 
                 breakpoints: {
-                    320: {
+                    300: {
                         slidesPerView: 1,
                     },
 
-                    425: {
+                    426: {
                         slidesPerView: 2,
                     },
 
-                    768: {
+                    769: {
                         slidesPerView: 3,
                     },
 
@@ -165,9 +165,8 @@ if (sliders.length) {
                 modules: [
                     Pagination
                 ],
-                slidesPerView: 1,
-                spaceBetween:16,
-
+                spaceBetween: 16,
+                slidesPerView: 'auto',
                 pagination: {
                     el: pagination,
                     clickable: true
@@ -182,22 +181,6 @@ if (sliders.length) {
                         else swiper.destroy()
                     }
                 },
-
-                breakpoints: {
-                    320: {
-                        slidesPerView: 1.5,
-                        spaceBetween: 16,
-                        centeredSlides: true,
-                    },
-
-                    425: {
-                        slidesPerView: 2,
-                    },
-
-                    768: {
-                        slidesPerView: 3,
-                    }
-                }
             })
         }
     })
