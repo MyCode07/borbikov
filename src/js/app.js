@@ -6,6 +6,7 @@ import { replaceDomElements } from "./static/replace.js";
 // import { toTop } from "./static/to-top.js";
 // import { stickyHeader } from "./parts/header.js";
 
+import "./parts/popup.js";
 import "./parts/menu.js";
 import "./parts/read-more.js";
 // import "./parts/mobile-controll.js";

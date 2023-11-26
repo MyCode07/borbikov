@@ -2,47 +2,25 @@
     @include adaptive-value("padding-top", 260, 132, 1);
     @include adaptive-value("margin-bottom", 64, 45, 1);
 
-    .section {
-        // .section__container
-
-        &__container {
+    .section__top {
+        h1 {
+            @media (min-width: 769px) {
+                margin-bottom: -24px;
+            }
         }
 
-        // .section__top
-
-        &__top {
-            h1 {
-                @media (min-width: 769px) {
-                    margin-bottom: -24px;
-                }
+        @media (max-width: 768px) {
+            h1,
+            p {
+                text-align: center;
             }
+        }
 
-            @media (max-width: 768px) {
-                h1 {
-                    margin-bottom: 12px;
-                }
+        // .section__top-flex
 
-                p {
-                    height: fit-content;
-                    margin-bottom: 24px;
-                }
-
-                h1,
-                p {
-                    text-align: center;
-                }
-            }
-
-            // .section__top-flex
-
-            &-flex {
+        &-flex {
+            @media (min-width: 769px) {
                 align-items: flex-end;
-
-                div {
-                    @media (max-width: 768px) {
-                        width: 100%;
-                    }
-                }
             }
         }
     }
@@ -52,9 +30,14 @@
         justify-content: center;
 
         border-radius: 8px;
+
         border: 1px solid rgba($color: $white, $alpha: 0.4);
+
         @include adaptive-value("padding-top", 60, 40, 1);
         @include adaptive-value("padding-bottom", 63, 47, 1);
+        @include adaptive-value("padding-left", 120, 60, 1);
+        @include adaptive-value("padding-right", 120, 60, 1);
+
         padding-left: 20px;
         padding-right: 20px;
 
@@ -65,7 +48,6 @@
         @media (max-width: 768px) {
             flex-direction: column;
             align-items: center;
-
             gap: 32px;
         }
 
@@ -74,10 +56,6 @@
             flex-direction: column;
             align-items: center;
             color: $white;
-
-            img {
-                @include adaptive-value("width", 280, 208, 1);
-            }
 
             span,
             label {
@@ -99,17 +77,20 @@
                 font-weight: 700;
                 letter-spacing: -0.48px;
             }
+
+            .stars {
+                max-width: 151px;
+
+                @media (max-width: 768px) {
+                    max-width: 136px;
+                }
+            }
         }
     }
 
-    .review-card__rating {
-        @include adaptive-value("width", 151, 132, 1);
-        margin: 0;
-    }
-
     ._center {
-        border-left: 1px solid rgba(255, 255, 255, 0.2);
-        border-right: 1px solid rgba(255, 255, 255, 0.2);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-width: 0 1px 0 1px;
 
         @media (min-width: 769px) {
             @include adaptive-value("padding-left", 49, 10, 1);
@@ -117,184 +98,23 @@
         }
 
         @media (max-width: 768px) {
-            width: 100%;
-            border-left: 0;
-            border-right: 0;
-            border-top: 1px solid rgba(255, 255, 255, 0.2);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-
+            border-width: 1px 0;
             padding-top: 32px;
             padding-bottom: 32px;
         }
     }
 }
 
-.reviews-page {
+.reviews-list {
     @include adaptive-value("margin-bottom", 100, 56, 1);
 
-    .section {
-        // .section__container
+    // .reviews-list__list
 
-        &__container {
-        }
-
-        // .section__body
-
-        &__body {
-        }
-
-        // .section__top
-
-        &__top {
-            // .section__top-flex
-
-            &-flex {
-            }
-        }
-    }
-
-    // .reviews-page__flex
-
-    &__flex {
+    &__list {
         @include adaptive-value("margin-bottom", 48, 24, 1);
 
         & > :not(:last-child) {
             @include adaptive-value("margin-bottom", 32, 16, 1);
-        }
-    }
-
-    // .reviews-page__box
-
-    &__box {
-        width: 100%;
-
-        ol {
-            & > :not(:last-child) {
-                @include adaptive-value("margin-bottom", 32, 20, 1);
-            }
-
-            li {
-                display: flex;
-                flex-direction: column;
-            }
-        }
-    }
-
-    // .reviews-page__card
-
-    &__card {
-        display: flex;
-        border-radius: 8px;
-        border: 1px solid rgba($color: $white, $alpha: 0.6);
-
-        @include adaptive-value("padding-top", 40, 24, 1);
-        @include adaptive-value("padding-left", 40, 24, 1);
-        @include adaptive-value("padding-right", 40, 24, 1);
-        @include adaptive-value("padding-bottom", 48, 24, 1);
-
-        .reviews-icon {
-            display: block;
-            flex: 0 0 auto;
-            @include adaptive-value("width", 86, 60, 1);
-            @include adaptive-value("height", 62, 60, 1);
-            @include adaptive-value("margin-right", 40, 20, 1);
-
-            fill: $white;
-            opacity: 0.9;
-        }
-
-        label {
-            color: $white;
-            @include adaptive-value("font-size", 24, 15, 1);
-            @include adaptive-value("letter-spacing", -0.48, 0, 1);
-            font-weight: 700;
-            display: block;
-        }
-
-        span {
-            margin-bottom: 4px;
-            color: #fff;
-            color: rgba($color: $white, $alpha: 0.6);
-            font-size: 15px;
-            display: block;
-
-            @media (max-width: 768px) {
-                margin-bottom: 8px;
-                font-size: 13px;
-            }
-        }
-
-        .data {
-            font-size: 15px !important;
-        }
-
-        p {
-            max-width: 933px;
-            width: 100%;
-
-            @include adaptive-value("font-size", 17, 15, 1);
-        }
-    }
-
-    // .reviews-page__person
-
-    &__person {
-        display: flex;
-        align-items: center;
-
-        @media (max-width: 768px) {
-            margin-bottom: 4px;
-        }
-
-        div {
-            display: flex;
-            flex-direction: column;
-
-            label {
-                @include adaptive-value("font-size", 24, 17, 1);
-
-                @media (max-width: 768px) {
-                    font-weight: 400;
-                }
-            }
-        }
-    }
-
-    // .reviews-page__top
-
-    &__top {
-        display: flex;
-        align-items: flex-start;
-        flex-direction: row !important;
-        justify-content: space-between;
-        width: 100%;
-
-        @media (max-width: 768px) {
-            flex-direction: column-reverse !important;
-            align-items: flex-start;
-        }
-    }
-
-    // .reviews-page__data
-
-    &__data {
-        display: flex;
-        align-items: center;
-        gap: 33px;
-
-        @media (max-width: 768px) {
-            width: 100%;
-            justify-content: space-between;
-            margin-bottom: 33px;
-        }
-
-        img {
-            width: 107px;
-        }
-
-        span {
-            white-space: nowrap;
-            margin: 0;
         }
     }
 

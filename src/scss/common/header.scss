@@ -120,8 +120,6 @@
             }
         }
     }
-    .hero-btns {
-    }
 
     // .header__info
 
@@ -590,10 +588,10 @@
             }
 
             nav > ul {
-                @include adaptive-value("gap", 24, -5, 1);
+                @include adaptive-value("gap", 24, -11, 1);
 
                 li a {
-                    font-size: 14px;
+                    font-size: 13.5px;
                 }
             }
         }

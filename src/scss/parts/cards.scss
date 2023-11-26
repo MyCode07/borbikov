@@ -314,58 +314,156 @@
     }
 }
 
-.work {
-    // .work-slide
+.work-slide {
+    display: flex;
+    gap: 24px;
 
-    &-slide {
-        display: flex;
-        gap: 24px;
+    @media (max-width: 768px) {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    div {
+        position: relative;
+        width: calc(50% - 12px);
 
         @media (max-width: 768px) {
-            flex-direction: column;
-            gap: 8px;
+            width: 100%;
+            min-height: calc(50% - 4px);
         }
 
-        div {
-            position: relative;
-            width: calc(50% - 12px);
+        span {
+            position: absolute;
+            bottom: 12px;
+            left: 12px;
+
+            z-index: 1;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+
+            background-color: $white;
+            color: $black;
+            font-size: 15px;
+            border-radius: 10px;
+            width: 73px;
+            height: 40px;
+
+            display: none;
 
             @media (max-width: 768px) {
-                width: 100%;
-                min-height: calc(50% - 4px);
-            }
-
-            span {
-                position: absolute;
-                bottom: 12px;
-                left: 12px;
-
-                z-index: 1;
-
                 display: flex;
-                align-items: center;
-                justify-content: center;
-                text-align: center;
-
-                background-color: $white;
-                color: $black;
-                font-size: 15px;
-                border-radius: 10px;
-                width: 73px;
-                height: 40px;
-
-                display: none;
-
-                @media (max-width: 768px) {
-                    display: flex;
-                }
             }
+        }
+    }
+
+    img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.reviews-list__card {
+    position: relative;
+    border-radius: 8px;
+    border: 1px solid rgba($color: $white, $alpha: 0.6);
+
+    @include adaptive-value("padding-top", 40, 24, 1);
+    @include adaptive-value("padding-right", 40, 24, 1);
+    @include adaptive-value("padding-bottom", 48, 24, 1);
+
+    @media (min-width: 769px) {
+        @include adaptive-value("padding-left", 166, 83, 1);
+    }
+
+    @media (max-width: 768px) {
+        @include adaptive-value("padding-left", 40, 24, 1);
+    }
+
+    // .reviews-list__card-date
+
+    &-date {
+        @media (min-width: 769px) {
+            position: absolute;
+            @include adaptive-value("top", 40, 24, 1);
+            @include adaptive-value("right", 40, 24, 1);
+        }
+
+        display: flex;
+        align-items: center;
+        gap: 32px;
+
+        color: rgba(250, 250, 250, 0.6);
+        font-size: 15px;
+        letter-spacing: 0.01em;
+
+        @media (max-width: 768px) {
+            justify-content: space-between;
+            width: 100%;
+            margin-bottom: 32px;
         }
 
         img {
-            object-fit: cover;
-            width: 100%;
-            height: 100%;
+            width: 107px;
+        }
+    }
+
+    // .reviews-list__card
+
+    &-name {
+        position: relative;
+        display: flex;
+        gap: 20px;
+
+        @include adaptive-value("margin-bottom", 32, 24, 1);
+
+        ._label-block {
+            span {
+                display: block;
+                font-size: 24px;
+                font-weight: 700;
+                margin-bottom: 4px;
+
+                @media (max-width: 768px) {
+                    font-size: 17px;
+                }
+            }
+
+            label {
+                margin-bottom: 0;
+            }
+        }
+
+        svg {
+            @include adaptive-value("width", 86, 60, 1);
+            fill: $white;
+            opacity: 0.9;
+
+            @media (min-width: 769px) {
+                position: absolute;
+                top: 0;
+                transform: translate(-100%, 0);
+                @include adaptive-value("left", -40, -20, 1);
+            }
+        }
+    }
+
+    ._label-block {
+        max-width: 932px;
+
+        &:not(.customer) {
+            span {
+                @media (min-width: 769px) {
+                    font-size: 17px;
+                }
+            }
+
+            &:last-child {
+                @include adaptive-value("margin-top", 32, 20, 1);
+            }
         }
     }
 }

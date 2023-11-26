@@ -1,45 +1,33 @@
-import { isMobile } from "./isMobile.js";
-
-const popupAll = document.querySelectorAll('.popup');
-const popupOpenButtons = document.querySelectorAll('[data-open-popup]');
+import { lockPadding, unLockPadding } from "../utils/lockPadding.js";
 
 
-if (popupOpenButtons.length)
-    popupOpenButtons.forEach(btn => {
-        btn.addEventListener('click', function (e) {
-            e.preventDefault();
-            const id = btn.getAttribute('id');
-            const popup = document.querySelector(`.popup[data-id="${id}"]`);
+document.addEventListener('click', function (e) {
+    let targetEl = e.target;
 
-            if (popup) {
-                popup.classList.add('_open');
-                document.body.classList.add('_noscroll');
+    if (targetEl.hasAttribute('data-open-popup')) {
+        e.preventDefault();
+        const id = targetEl.getAttribute('data-id');
+        const popup = document.querySelector(`.popup#${id}`);
 
-                if (!isMobile.any()) {
-                    lockPadding()
-                }
-            }
-        })
-    }) 
+        if (popup) {
+            popup.classList.add('_open')
+            lockPadding();
+        }
+    }
 
-if (popupAll.length)
-    popupAll.forEach(popup => {
-        const popupClose = popup.querySelector('.popup__close');
+    if (targetEl.classList.contains('popup')) {
+        targetEl.classList.remove('_open')
 
-        popupClose.addEventListener('click', function () {
-            popup.classList.remove('_open');
-            document.body.classList.remove('_noscroll');
 
-            if (!isMobile.any()) {
-                unLockPadding()
-            }
-        })
+        if (!document.querySelector('.header nav._open'))
+            unLockPadding();
+    }
 
-        popup.addEventListener('click', function (e) {
-            if (e.target.classList.contains('popup')) {
-                popup.classList.remove('_open')
-                document.body.classList.remove('_noscroll');
-                unLockPadding()
-            }
-        })
-    })
+    if (targetEl.classList.contains('popup__close')) {
+        const popup = targetEl.closest('.popup');
+        popup.classList.remove('_open');
+
+        if (!document.querySelector('.header nav._open'))
+            unLockPadding();
+    }
+})

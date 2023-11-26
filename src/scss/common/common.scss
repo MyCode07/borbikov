@@ -6,6 +6,8 @@ body {
     scroll-behavior: smooth;
     font-style: normal;
     line-height: 1.4;
+    font-size: 17px;
+
     font-family: "CeraPro";
 
     color: $white;
@@ -75,6 +77,10 @@ svg {
 
     color: $black;
     border: 1px solid currentColor;
+
+    * {
+        pointer-events: none;
+    }
 
     @media (max-width: 768px) {
         font-size: 15px;
@@ -271,7 +277,6 @@ h3 {
     border-radius: 8px;
     border: 1px solid $white;
     background: $black;
-    
 
     img,
     svg {
@@ -284,7 +289,7 @@ h3 {
         &:hover {
             background-color: $white;
 
-            svg{
+            svg {
                 fill: $black;
             }
         }

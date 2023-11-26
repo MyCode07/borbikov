@@ -3,81 +3,17 @@
 })
 
 @@include('./html/header.html', {
-"class":"_sticky _scrolled",
+"class":"",
 })
 
-<style>
-    .main-wrapper {
-        position: relative;
-        margin: 150px auto 0 auto;
-    }
+<main>
 
-    .main-wrapper>ul {
-        list-style: none;
-        padding: 0;
-        width: 200px;
-        max-height: 140px;
-        overflow-x: hidden;
-        overflow-y: auto;
-        background: #333;
-        color: #fff;
-    }
-
-    .main-wrapper>ul>li {
-        position: static;
-        padding: 5px;
-        background: #333;
-    }
-
-    .main-wrapper>ul>li:hover {
-        background: #111;
-    }
-
-    .dropdown {
-        position: absolute;
-        background: #f00;
-        left: 150px;
-        display: none;
-        padding: 30px;
-        list-style: none;
-    }
-
-    .main-wrapper>ul li:hover .dropdown {
-        display: block
-    }
-</style>
-
-
-<main class="empty">
-
-    <section class="error-404">
-        <div class="error-404__container _container">
-            <div class="error-404__body">
-                <h1>404 <span>Ничего не найдено</span></h1>
-
-                <div class="main-wrapper">
-                    <ul>
-                        <li>Link 1</li>
-                        <li>Link 2</li>
-                        <li class="has-children">Link with dropdown
-                            <div class="dropdown">
-                                <ul>
-                                    <li>Link 1</li>
-                                    <li>Link 2</li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li>Link 4</li>
-                        <li class="has-children">with dropdown
-                            <div class="dropdown">
-                                <ul>
-                                    <li>Link 1</li>
-                                    <li>Link 2</li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li>Link 6</li>
-                    </ul>
+    <section class="section error-404">
+        <div class="section__container _container">
+            <div class="section__body">
+                <div class="section__top">
+                    <h1>404</h1>
+                    <p>Ничего не найдено</p>
                 </div>
             </div>
         </div>

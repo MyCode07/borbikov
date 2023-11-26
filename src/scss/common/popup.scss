@@ -5,15 +5,31 @@
     transform: translate(-50%, -50%);
     background-color: rgba($color: $black, $alpha: 0.8);
     width: 100%;
-    min-height: 100vh;
+    height: 100vh;
     z-index: 100;
+
+    overflow-y: auto;
+
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+    transition: opacity 0.3s ease 0s;
+
+    &._open {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: all;
+
+        .popup__content {
+            transform: translate3d(0, 0, 0);
+        }
+    }
 
     // .popup__container
 
     &__container {
-        min-height: 100vh;
-
         @media (max-width: 768px) {
+            min-height: 100%;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -54,12 +70,19 @@
             transition: all 0.3s ease 0s;
         }
 
+        img,
+        svg {
+            pointer-events: none;
+        }
+
         @media (any-hover: hover) {
             &:hover {
                 background-color: $white;
 
+                img,
                 svg {
                     stroke: $black;
+                    transform: rotate(90deg);
                 }
             }
         }
@@ -68,24 +91,32 @@
     // .popup__body
 
     &__body {
+        padding-top: 120px;
+        padding-bottom: 30px;
+
+        @media (max-width: 768px) {
+            padding-top: 92px;
+        }
+    }
+
+    // .popup__content
+
+    &__content {
+        transform: translate3d(100px, 0, 0);
+        transition: all 0.3s ease 0s;
+
         position: relative;
+        max-width: 522px;
+        width: 100%;
+        margin: 0 auto;
 
-        width: fit-content;
-        height: fit-content;
-        margin-left: auto;
-        margin-right: auto;
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        border-radius: 8px;
-        background: $white;
         @include adaptive-value("padding-top", 52, 24, 1);
         @include adaptive-value("padding-bottom", 68, 32, 1);
         @include adaptive-value("padding-left", 80, 20, 1);
         @include adaptive-value("padding-right", 80, 20, 1);
-        margin-top: 120px;
+
+        border-radius: 8px;
+        background: $white;
 
         @media (max-width: 768px) {
             border-radius: 16px;
@@ -94,11 +125,7 @@
             margin-right: auto;
             border-radius: 8px;
         }
-    }
 
-    // .popup__content
-
-    &__content {
         label {
             width: 100%;
             display: block;
@@ -112,129 +139,80 @@
         }
     }
 
-    .form {
-        p {
-            color: rgba($color: $black, $alpha: 0.6);
-            text-align: center;
-            font-size: 13px;
-            max-width: 360px;
-            width: 100%;
-        }
-
-        // .form__row
-
-        &__row {
-            margin-bottom: 32px;
-
-            & > :not(:last-child) {
-                @include adaptive-value("margin-bottom", 12, 8, 1);
-            }
-        }
-
-        // .form__item
-
-        &__item {
-            cursor: pointer;
-            width: 100%;
-            border-radius: 8px;
+    .form__item {
+        textarea,
+        input {
             border: 1px solid #bec6cb;
-            background: #fff;
-            transition: all 0.3s ease 0s;
+
+            transition: border-color 0.3s ease 0s;
 
             @media (any-hover: hover) {
                 &:hover {
-                    border: 1px solid $accent;
-                }
-            }
-
-            input {
-                height: 56px;
-                cursor: pointer;
-                display: flex;
-                align-items: center;
-                width: 100%;
-                height: 100%;
-
-                color: $black;
-                @include adaptive-value("font-size", 17, 15, 1);
-                font-style: normal;
-                font-weight: 400;
-                line-height: 120%;
-
-                &::placeholder {
-                    color: $black;
+                    border-color: $accent;
                 }
             }
         }
+    }
 
-        // .form__button
+    .form__upload {
+        &:after {
+            border-color: $white;
+        }
 
-        &__button {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+        div {
+            color: $black;
+        }
+
+        span {
+            color: rgba($color: $black, $alpha: 0.6);
+        }
+    }
+
+    .form__send {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 24px;
+
+        input {
             width: 100%;
-
-            button {
-                width: 100%;
-                @include adaptive-value("margin-bottom", 32, 24, 1);
-                opacity: 0.4;
-            }
+            max-width: none;
         }
 
-        // .form__send
+        p {
+            margin-top: 32px;
+            color: rgba($color: $black, $alpha: 0.6);
+            text-align: center;
+            margin-left: 0;
 
-        &__send {
-            input {
-                width: 50%;
-                max-width: unset;
-
-                @media (min-width: 769px) {
-                    width: 50%;
-                }
-
-                @media (max-width: 768px) {
-                    width: 100%;
-                }
-            }
-
-            p {
-                color: rgba($color: $black, $alpha: 0.6);
-                text-align: left;
-                font-size: 13px;
-
-                @media (min-width: 769px) {
-                    width: 50%;
-                }
-
-                @media (max-width: 768px) {
-                    text-align: center;
-                }
-            }
-        }
-
-        // .form__upload
-
-        &__upload {
-            * {
-                color: $black;
+            @media (max-width: 768px) {
+                margin-top: 24px;
             }
         }
     }
-    ._btn {
-        // ._btn-accent
 
-        &-accent {
+    &#callback {
+    }
+
+    &#calculate {
+        .popup__content {
+            max-width: 916px;
+        }
+
+        @media (min-width: 769px) {
+            .form__send {
+                flex-direction: row;
+                gap: 32px;
+
+                input {
+                    width: 50%;
+                }
+
+                p {
+                    text-align: left;
+                    margin-top: 0;
+                    width: 50%;
+                }
+            }
         }
     }
-}
-
-.call {
-}
-
-.calc {
-    display: none;
-}
-
-.form__upload {
 }
