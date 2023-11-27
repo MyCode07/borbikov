@@ -230,6 +230,16 @@
 
 .services {
     @include adaptive-value("margin-bottom", 100, 60, 1);
+
+    h2 {
+        text-align: center;
+    }
+
+    .service-card {
+        ._label {
+            color: $white;
+        }
+    }
 }
 
 .services-slider {
@@ -350,7 +360,7 @@
         // .swiper-slide
 
         &-slide {
-            @media (max-width:768px){
+            @media (max-width: 768px) {
                 max-width: 312px;
             }
         }

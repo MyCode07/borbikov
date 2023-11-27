@@ -435,3 +435,65 @@ h3 {
         fill: currentColor;
     }
 }
+
+.hero:has(.breadcrumbs) {
+    position: relative;
+}
+
+.breadcrumbs {
+    position: absolute;
+    bottom: 60px;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+
+    @media (max-width: 768px) {
+        bottom: unset;
+        top: 85px;
+    }
+
+    ul {
+        display: flex;
+        align-items: center;
+        width: fit-content;
+        gap: 6px;
+
+        li {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+
+            font-size: 13px;
+
+            color: $white;
+
+            &.active {
+                color: rgba($color: $white, $alpha: 0.6);
+            }
+        }
+
+        @media (max-width: 768px) {
+            display: none;
+        }
+    }
+
+    .back {
+        display: flex;
+        align-items: center;
+
+        color: $white;
+        font-size: 15px;
+
+        svg {
+            width: 10px;
+            fill: currentColor;
+            margin-right: 8px;
+        }
+
+        display: none;
+
+        @media (max-width: 768px) {
+            display: flex;
+        }
+    }
+}

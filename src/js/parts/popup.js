@@ -23,7 +23,7 @@ document.addEventListener('click', function (e) {
             unLockPadding();
     }
 
-    if (targetEl.classList.contains('popup__close')) {
+    if (targetEl.classList.contains('popup__close') || targetEl.hasAttribute('data-close-popup')) {
         const popup = targetEl.closest('.popup');
         popup.classList.remove('_open');
 
