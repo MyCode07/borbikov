@@ -131,8 +131,6 @@ if (sliders.length) {
                     Navigation, Pagination
                 ],
 
-                slidesPerView: 3,
-                spaceBetween: 39,
 
                 navigation: {
                     prevEl: prev,
@@ -146,15 +144,21 @@ if (sliders.length) {
 
                 breakpoints: {
                     300: {
-                        slidesPerView: 1,
+                        slidesPerView: 'auto',
+                        spaceBetween: 16,
+                        centeredSlides: true
                     },
 
-                    426: {
+                    601: {
                         slidesPerView: 2,
+                        spaceBetween: 20,
+                        centeredSlides: false
                     },
 
-                    769: {
+                    1025: {
                         slidesPerView: 3,
+                        spaceBetween: 39,
+                        centeredSlides: false
                     },
 
                 }
@@ -169,6 +173,37 @@ if (sliders.length) {
                 slidesPerView: 'auto',
                 pagination: {
                     el: pagination,
+                    clickable: true
+                },
+                on: {
+                    resize: (swiper) => {
+                        if (window.innerWidth <= 768) swiper.init()
+                        else swiper.destroy()
+                    },
+                    init: (swiper) => {
+                        if (window.innerWidth <= 768) swiper.init()
+                        else swiper.destroy()
+                    }
+                },
+            })
+        }
+        else if (section.classList.contains('hero-works')) {
+            new Swiper(slider, {
+                modules: [
+                    Navigation, Pagination
+                ],
+                loop: true,
+                slidesPerView: 1,
+                spaceBetween: 60,
+
+                navigation: {
+                    prevEl: prev,
+                    nextEl: next,
+                },
+
+                pagination: {
+                    el: pagination,
+                    type: 'fraction',
                     clickable: true
                 },
                 on: {

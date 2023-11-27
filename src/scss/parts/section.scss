@@ -169,6 +169,10 @@
             margin: 30px 0 20px 0;
         }
 
+        @media (max-width: 768px) {
+            overflow: hidden;
+        }
+
         // .swiper-wrapper
 
         &-wrapper {
@@ -231,52 +235,41 @@
 .services-slider {
     @include adaptive-value("margin-bottom", 100, 60, 1);
 
-    .section__body {
-        position: relative;
-    }
+    .section__top button {
+        width: 152px;
 
-    .section__top {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-
-        button {
-            width: 152px;
-
-            @media (max-width: 1024px) {
-                display: none;
-            }
+        @media (max-width: 1024px) {
+            display: none;
         }
     }
 
     .service-card__bottom {
-        flex-direction: column;
-        align-items: flex-start;
-
-        @media (max-width: 768px) {
-            flex-direction: row;
+        @media (min-width: 769px) {
+            flex-direction: column;
+            align-items: flex-start;
         }
 
         h3 {
-            padding: 0;
-            @include adaptive-value("margin-bottom", 40, 0, 1);
-            margin-inline: 0;
-            margin-left: 0;
-            max-width: unset;
+            max-width: none;
+
+            @media (min-width: 769px) {
+                padding: 0;
+                @include adaptive-value("margin-bottom", 40, 0, 1);
+                margin-inline: 0;
+                margin-left: 0;
+            }
 
             @media (max-width: 768px) {
-                margin-right: 20px;
             }
         }
 
-        button {
+        ._btn {
             @media (max-width: 768px) {
                 display: none;
             }
         }
 
         .next {
-            flex: 0 0 auto;
             @media (min-width: 769px) {
                 display: none;
             }
@@ -287,33 +280,48 @@
         @include adaptive-value("height", 200, 132, 1);
     }
 
-    .works-control {
-        z-index: 2;
-        left: -2%;
-        top: 36%;
-        width: calc(100% + 52px);
-
-        @media (max-width: 1024px) {
-            display: none;
-        }
-    }
-
     .pagination {
         @media (min-width: 1024px) {
             display: none;
         }
     }
 
-    .swiper-slide {
-        min-width: 316px;
+    .swiper {
+        width: calc(100% + 52px);
+        margin-left: -26px;
+        padding: 0 26px;
+
+        @media (max-width: 1024px) {
+            width: calc(100% + 32px);
+            margin-left: -16px;
+            padding: 0 16px;
+        }
+
+        @media (max-width: 768px) {
+            width: 100%;
+            margin-left: 0;
+            padding: 0;
+        }
+
+        // .swiper-slide
+
+        &-slide {
+            @media (max-width: 425px) {
+                max-width: 312px;
+            }
+        }
+    }
+
+    .slider-control {
+        top: 20%;
+
+        @media (max-width: 1024px) {
+            display: none;
+        }
     }
 
     ._label {
         gap: 10px;
-
-        strong {
-            opacity: 0.6;
-        }
     }
 
     ._more {
@@ -388,26 +396,6 @@
     @include adaptive-value("padding-top", 60, 24, 1);
     @include adaptive-value("padding-bottom", 68, 32, 1);
     @include adaptive-value("margin-bottom", 84, 60, 1);
-
-    // .works-control
-
-    &-control {
-        position: absolute;
-        top: calc(50% - 26px);
-        left: 0;
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-
-        @media (max-width: 768px) {
-            position: static;
-        }
-
-        button {
-            z-index: 2;
-            position: relative;
-        }
-    }
 
     .swiper {
         width: calc(100% + 52px);

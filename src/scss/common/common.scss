@@ -259,6 +259,74 @@ h3 {
     }
 }
 
+._label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    gap: 10px;
+    padding: 10px 17px;
+    border-radius: 8px;
+    background-color: rgba($color: $white, $alpha: 0.05);
+    color: rgba($color: $white, $alpha: 0.6);
+
+    font-size: 17px;
+    font-weight: 700;
+    white-space: nowrap;
+
+    @media (max-width: 1024px) {
+        padding: 9.5px 12px;
+        font-size: 15px;
+        font-weight: 500;
+        gap: 4px;
+    }
+
+    strong,
+    b {
+        color: $white;
+    }
+
+    // ._label-price
+
+    &-price {
+        // background-color: $accent;
+    }
+
+    // ._label-hit
+
+    &-hit {
+        background-color: $orange;
+    }
+}
+
+.swiper {
+    @media (max-width: 768px) {
+        overflow: visible;
+    }
+}
+
+.slider-control {
+    position: absolute;
+    top: calc(50% - 26px);
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: 768px) {
+        position: static;
+    }
+
+    button {
+        z-index: 2;
+        position: relative;
+    }
+}
+
+.swiper-button-disabled {
+    opacity: 0.3;
+}
+
 .prev,
 .next {
     display: flex;
@@ -268,6 +336,7 @@ h3 {
 
     width: 52px;
     height: 52px;
+    flex: 0 0 auto;
 
     @media (max-width: 768px) {
         width: 48px;

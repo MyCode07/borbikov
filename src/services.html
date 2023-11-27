@@ -7,6 +7,7 @@
 })
 
 <main>
+
     <section class="hero hero-services">
         <div class="hero__container _container">
             <div class="hero__body">
@@ -16,11 +17,8 @@
                         <button class="_btn _btn-big _btn-accent">Записаться на оценку <br> бесплатно</button>
                         <button class="_btn  _btn-big _btn-unfill">Оценить стоимость <br> ремонта по фото</button>
                     </div>
-                    <div class="hero__info">
-                        <li>от 30 минут <label>—</label> <strong> от 1000 ₽</strong></li>
-                    </div>
+                    <div class="_label _label-price">от 30 минут <label>—</label> <strong> от 1000 ₽</strong></div>
                 </div>
-
             </div>
         </div>
     </section>
@@ -29,11 +27,24 @@
         <div class="section__container _container">
             <div class="section__body">
                 <div class="section__top">
-                    <h2>Удаление вмятин</h2>
-                    <button class="_btn _btn-big _btn-unfill">Все услуги</button>
+                    <div class="section__top-flex">
+                        <h2>Удаление вмятин</h2>
+                        <button class="_btn _btn-big _btn-unfill">Все услуги</button>
+                    </div>
                 </div>
-
                 <div class="swiper">
+                    <div class="slider-control">
+                        <button class="prev">
+                            <svg width="20" height="14" viewBox="0 0 20 14">
+                                <use xlink:href="img/svg/icons.svg#slider-arrow"></use>
+                            </svg>
+                        </button>
+                        <button class="next">
+                            <svg width="20" height="14" viewBox="0 0 20 14">
+                                <use xlink:href="img/svg/icons.svg#slider-arrow"></use>
+                            </svg>
+                        </button>
+                    </div>
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <article class="service-card">
@@ -42,37 +53,13 @@
                                         <img src="img/services-img/services-1.png" alt="">
                                     </div>
                                     <div class="labels">
-                                        <span class="_label _label-price">от 30 минут <label>—</label> <strong> от 1000
-                                                ₽</strong></span>
+                                        <span class="_label _label-price"><strong>от 30 минут</strong> <label>—</label>
+                                            от 1000 ₽</span>
                                     </div>
                                 </a>
-
                                 <a href="" class="service-card__bottom">
                                     <h3>Ремонт вмятин после града в Москве и области</h3>
-                                    <button class="_btn _btn-big _btn-unfill">Подробнее</button>
-                                    <div class="next">
-                                        <svg viewBox="0 0 7 18">
-                                            <use xlink:href="img/svg/icons.svg#slider-arrow"></use>
-                                        </svg>
-                                    </div>
-                                </a>
-                            </article>
-                        </div>
-                        <div class="swiper-slide">
-                            <article class="service-card">
-                                <a href="" class="service-card__top">
-                                    <div class="service-card__img">
-                                        <img src="img/services-img/services-1.png" alt="">
-                                    </div>
-                                    <div class="labels">
-                                        <span class="_label _label-price">от 30 минут <label>—</label> <strong> от 1000
-                                                ₽</strong></span>
-                                    </div>
-                                </a>
-
-                                <a href="" class="service-card__bottom">
-                                    <h3>Ремонт вмятин после града в Москве и области</h3>
-                                    <button class="_btn _btn-big _btn-unfill">Подробнее</button>
+                                    <div class="_btn _btn-big _btn-unfill">Подробнее</div>
                                     <div class="next">
                                         <svg viewBox="0 0 7 18">
                                             <use xlink:href="img/svg/icons.svg#slider-arrow"></use>
@@ -88,14 +75,13 @@
                                         <img src="img/services-img/services-1.png" alt="">
                                     </div>
                                     <div class="labels">
-                                        <span class="_label _label-price">от 30 минут <label>—</label> <strong> от 1000
-                                                ₽</strong></span>
+                                        <span class="_label _label-price"><strong>от 30 минут</strong> <label>—</label>
+                                            от 1000 ₽</span>
                                     </div>
                                 </a>
-
                                 <a href="" class="service-card__bottom">
                                     <h3>Ремонт вмятин после града в Москве и области</h3>
-                                    <button class="_btn _btn-big _btn-unfill">Подробнее</button>
+                                    <div class="_btn _btn-big _btn-unfill">Подробнее</div>
                                     <div class="next">
                                         <svg viewBox="0 0 7 18">
                                             <use xlink:href="img/svg/icons.svg#slider-arrow"></use>
@@ -111,14 +97,35 @@
                                         <img src="img/services-img/services-1.png" alt="">
                                     </div>
                                     <div class="labels">
-                                        <span class="_label _label-price">от 30 минут <label>—</label> <strong> от 1000
-                                                ₽</strong></span>
+                                        <span class="_label _label-price"><strong>от 30 минут</strong> <label>—</label>
+                                            от 1000 ₽</span>
                                     </div>
                                 </a>
-
                                 <a href="" class="service-card__bottom">
                                     <h3>Ремонт вмятин после града в Москве и области</h3>
-                                    <button class="_btn _btn-big _btn-unfill">Подробнее</button>
+                                    <div class="_btn _btn-big _btn-unfill">Подробнее</div>
+                                    <div class="next">
+                                        <svg viewBox="0 0 7 18">
+                                            <use xlink:href="img/svg/icons.svg#slider-arrow"></use>
+                                        </svg>
+                                    </div>
+                                </a>
+                            </article>
+                        </div>
+                        <div class="swiper-slide">
+                            <article class="service-card">
+                                <a href="" class="service-card__top">
+                                    <div class="service-card__img">
+                                        <img src="img/services-img/services-1.png" alt="">
+                                    </div>
+                                    <div class="labels">
+                                        <span class="_label _label-price"><strong>от 30 минут</strong> <label>—</label>
+                                            от 1000 ₽</span>
+                                    </div>
+                                </a>
+                                <a href="" class="service-card__bottom">
+                                    <h3>Ремонт вмятин после града в Москве и области</h3>
+                                    <div class="_btn _btn-big _btn-unfill">Подробнее</div>
                                     <div class="next">
                                         <svg viewBox="0 0 7 18">
                                             <use xlink:href="img/svg/icons.svg#slider-arrow"></use>
@@ -128,26 +135,8 @@
                             </article>
                         </div>
                     </div>
-
                 </div>
-
-                <div class="pagination"><span class="swiper-pagination-bullet"></span><span
-                        class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span><span
-                        class="swiper-pagination-bullet"></span></div>
-
-                <div class="works-control">
-                    <button class="prev">
-                        <svg width="20" height="14" viewBox="0 0 20 14">
-                            <use xlink:href="img/svg/icons.svg#slider-arrow"></use>
-                        </svg>
-                    </button>
-                    <button class="next">
-                        <svg width="20" height="14" viewBox="0 0 20 14">
-                            <use xlink:href="img/svg/icons.svg#slider-arrow"></use>
-                        </svg>
-                    </button>
-                </div>
-
+                <div class="pagination"></div>
                 <a href="" class="_btn _btn-big _btn-unfill _more">
                     <span>Все услуги</span>
                 </a>
@@ -155,384 +144,7 @@
         </div>
     </section>
 
-    <section class="section services-slider">
-        <div class="section__container _container">
-            <div class="section__body">
-                <div class="section__top">
-                    <h2>Полировка</h2>
-                    <button class="_btn _btn-big _btn-unfill">Все услуги</button>
-                </div>
 
-                <div class="swiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <article class="service-card">
-                                <a href="" class="service-card__top">
-                                    <div class="service-card__img">
-                                        <img src="img/polirovka/polirovka-1.png" alt="">
-                                    </div>
-                                    <div class="labels">
-                                        <span class="_label _label-price">от 30 минут <label>—</label> <strong> от 1000
-                                                ₽</strong></span>
-                                    </div>
-                                </a>
-
-                                <a href="" class="service-card__bottom">
-                                    <h3>Ремонт вмятин после града в Москве и области</h3>
-                                    <button class="_btn _btn-big _btn-unfill">Подробнее</button>
-                                    <div class="next">
-                                        <svg viewBox="0 0 7 18">
-                                            <use xlink:href="img/svg/icons.svg#slider-arrow"></use>
-                                        </svg>
-                                    </div>
-                                </a>
-                            </article>
-                        </div>
-                        <div class="swiper-slide">
-                            <article class="service-card">
-                                <a href="" class="service-card__top">
-                                    <div class="service-card__img">
-                                        <img src="img/polirovka/polirovka-2.png" alt="">
-                                    </div>
-                                    <div class="labels">
-                                        <span class="_label _label-price">от 30 минут <label>—</label> <strong> от 1000
-                                                ₽</strong></span>
-                                    </div>
-                                </a>
-
-                                <a href="" class="service-card__bottom">
-                                    <h3>Ремонт вмятин после града в Москве и области</h3>
-                                    <button class="_btn _btn-big _btn-unfill">Подробнее</button>
-                                    <div class="next">
-                                        <svg viewBox="0 0 7 18">
-                                            <use xlink:href="img/svg/icons.svg#slider-arrow"></use>
-                                        </svg>
-                                    </div>
-                                </a>
-                            </article>
-                        </div>
-                        <div class="swiper-slide">
-                            <article class="service-card">
-                                <a href="" class="service-card__top">
-                                    <div class="service-card__img">
-                                        <img src="img/polirovka/polirovka-3.png" alt="">
-                                    </div>
-                                </a>
-
-                                <a href="" class="service-card__bottom">
-                                    <h3>Ремонт вмятин после града в Москве и области</h3>
-                                    <button class="_btn _btn-big _btn-unfill">Подробнее</button>
-                                    <div class="next">
-                                        <svg viewBox="0 0 7 18">
-                                            <use xlink:href="img/svg/icons.svg#slider-arrow"></use>
-                                        </svg>
-                                    </div>
-                                </a>
-                            </article>
-                        </div>
-                        <div class="swiper-slide">
-                            <article class="service-card">
-                                <a href="" class="service-card__top">
-                                    <div class="service-card__img">
-                                        <img src="img/polirovka/polirovka-1.png" alt="">
-                                    </div>
-                                    <div class="labels">
-                                        <span class="_label _label-price">от 30 минут <label>—</label> <strong> от 1000
-                                                ₽</strong></span>
-                                    </div>
-                                </a>
-
-                                <a href="" class="service-card__bottom">
-                                    <h3>Ремонт вмятин после града в Москве и области</h3>
-                                    <button class="_btn _btn-big _btn-unfill">Подробнее</button>
-                                    <div class="next">
-                                        <svg viewBox="0 0 7 18">
-                                            <use xlink:href="img/svg/icons.svg#slider-arrow"></use>
-                                        </svg>
-                                    </div>
-                                </a>
-                            </article>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="pagination"><span class="swiper-pagination-bullet"></span><span
-                        class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span><span
-                        class="swiper-pagination-bullet"></span></div>
-
-                <div class="works-control">
-                    <button class="prev">
-                        <svg width="20" height="14" viewBox="0 0 20 14">
-                            <use xlink:href="img/svg/icons.svg#slider-arrow"></use>
-                        </svg>
-                    </button>
-                    <button class="next">
-                        <svg width="20" height="14" viewBox="0 0 20 14">
-                            <use xlink:href="img/svg/icons.svg#slider-arrow"></use>
-                        </svg>
-                    </button>
-                </div>
-
-                <a href="" class="_btn _btn-big _btn-unfill _more">
-                    <span>Все услуги</span>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <section class="section services-slider">
-        <div class="section__container _container">
-            <div class="section__body">
-                <div class="section__top">
-                    <h2>Удаление царапин</h2>
-                    <button class="_btn _btn-big _btn-unfill">Все услуги</button>
-                </div>
-
-                <div class="swiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <article class="service-card">
-                                <a href="" class="service-card__top">
-                                    <div class="service-card__img">
-                                        <img src="img/udalenie-carapin/udalenie-carapin-1.png" alt="">
-                                    </div>
-                                    <div class="labels">
-                                        <span class="_label _label-price">от 30 минут <label>—</label> <strong> от 1000
-                                                ₽</strong></span>
-                                    </div>
-                                </a>
-
-                                <a href="" class="service-card__bottom">
-                                    <h3>Ремонт вмятин после града в Москве и области</h3>
-                                    <button class="_btn _btn-big _btn-unfill">Подробнее</button>
-                                    <div class="next">
-                                        <svg viewBox="0 0 7 18">
-                                            <use xlink:href="img/svg/icons.svg#slider-arrow"></use>
-                                        </svg>
-                                    </div>
-                                </a>
-                            </article>
-                        </div>
-                        <div class="swiper-slide">
-                            <article class="service-card">
-                                <a href="" class="service-card__top">
-                                    <div class="service-card__img">
-                                        <img src="img/udalenie-carapin/udalenie-carapin-2.png" alt="">
-                                    </div>
-                                    <div class="labels">
-                                        <span class="_label _label-price">от 30 минут <label>—</label> <strong> от 1000
-                                                ₽</strong></span>
-                                    </div>
-                                </a>
-
-                                <a href="" class="service-card__bottom">
-                                    <h3>Ремонт вмятин после града в Москве и области</h3>
-                                    <button class="_btn _btn-big _btn-unfill">Подробнее</button>
-                                    <div class="next">
-                                        <svg viewBox="0 0 7 18">
-                                            <use xlink:href="img/svg/icons.svg#slider-arrow"></use>
-                                        </svg>
-                                    </div>
-                                </a>
-                            </article>
-                        </div>
-                        <div class="swiper-slide">
-                            <article class="service-card">
-                                <a href="" class="service-card__top">
-                                    <div class="service-card__img">
-                                        <img src="img/udalenie-carapin/udalenie-carapin-3.png" alt="">
-                                    </div>
-                                </a>
-
-                                <a href="" class="service-card__bottom">
-                                    <h3>Ремонт вмятин после града в Москве и области</h3>
-                                    <button class="_btn _btn-big _btn-unfill">Подробнее</button>
-                                    <div class="next">
-                                        <svg viewBox="0 0 7 18">
-                                            <use xlink:href="img/svg/icons.svg#slider-arrow"></use>
-                                        </svg>
-                                    </div>
-                                </a>
-                            </article>
-                        </div>
-                        <div class="swiper-slide">
-                            <article class="service-card">
-                                <a href="" class="service-card__top">
-                                    <div class="service-card__img">
-                                        <img src="img/udalenie-carapin/udalenie-carapin-1.png" alt="">
-                                    </div>
-                                    <div class="labels">
-                                        <span class="_label _label-price">от 30 минут <label>—</label> <strong> от 1000
-                                                ₽</strong></span>
-                                    </div>
-                                </a>
-
-                                <a href="" class="service-card__bottom">
-                                    <h3>Ремонт вмятин после града в Москве и области</h3>
-                                    <button class="_btn _btn-big _btn-unfill">Подробнее</button>
-                                    <div class="next">
-                                        <svg viewBox="0 0 7 18">
-                                            <use xlink:href="img/svg/icons.svg#slider-arrow"></use>
-                                        </svg>
-                                    </div>
-                                </a>
-                            </article>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="pagination"><span class="swiper-pagination-bullet"></span><span
-                        class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span><span
-                        class="swiper-pagination-bullet"></span></div>
-
-                <div class="works-control">
-                    <button class="prev">
-                        <svg width="20" height="14" viewBox="0 0 20 14">
-                            <use xlink:href="img/svg/icons.svg#slider-arrow"></use>
-                        </svg>
-                    </button>
-                    <button class="next">
-                        <svg width="20" height="14" viewBox="0 0 20 14">
-                            <use xlink:href="img/svg/icons.svg#slider-arrow"></use>
-                        </svg>
-                    </button>
-                </div>
-
-                <a href="" class="_btn _btn-big _btn-unfill _more">
-                    <span>Все услуги</span>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <section class="section services-slider">
-        <div class="section__container _container">
-            <div class="section__body">
-                <div class="section__top">
-                    <h2>Локальный ремонт</h2>
-                    <button class="_btn _btn-big _btn-unfill">Все услуги</button>
-                </div>
-
-                <div class="swiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <article class="service-card">
-                                <a href="" class="service-card__top">
-                                    <div class="service-card__img">
-                                        <img src="img/local-remont/local-remont-1.png" alt="">
-                                    </div>
-                                    <div class="labels">
-                                        <span class="_label _label-price">от 30 минут <label>—</label> <strong> от 1000
-                                                ₽</strong></span>
-                                    </div>
-                                </a>
-
-                                <a href="" class="service-card__bottom">
-                                    <h3>Ремонт вмятин после града в Москве и области</h3>
-                                    <button class="_btn _btn-big _btn-unfill">Подробнее</button>
-                                    <div class="next">
-                                        <svg viewBox="0 0 7 18">
-                                            <use xlink:href="img/svg/icons.svg#slider-arrow"></use>
-                                        </svg>
-                                    </div>
-                                </a>
-                            </article>
-                        </div>
-                        <div class="swiper-slide">
-                            <article class="service-card">
-                                <a href="" class="service-card__top">
-                                    <div class="service-card__img">
-                                        <img src="img/local-remont/local-remont-2.png" alt="">
-                                    </div>
-                                    <div class="labels">
-                                        <span class="_label _label-price">от 30 минут <label>—</label> <strong> от 1000
-                                                ₽</strong></span>
-                                    </div>
-                                </a>
-
-                                <a href="" class="service-card__bottom">
-                                    <h3>Ремонт вмятин после града в Москве и области</h3>
-                                    <button class="_btn _btn-big _btn-unfill">Подробнее</button>
-                                    <div class="next">
-                                        <svg viewBox="0 0 7 18">
-                                            <use xlink:href="img/svg/icons.svg#slider-arrow"></use>
-                                        </svg>
-                                    </div>
-                                </a>
-                            </article>
-                        </div>
-                        <div class="swiper-slide">
-                            <article class="service-card">
-                                <a href="" class="service-card__top">
-                                    <div class="service-card__img">
-                                        <img src="img/local-remont/local-remont-3.png" alt="">
-                                    </div>
-                                </a>
-
-                                <a href="" class="service-card__bottom">
-                                    <h3>Ремонт вмятин после града в Москве и области</h3>
-                                    <button class="_btn _btn-big _btn-unfill">Подробнее</button>
-                                    <div class="next">
-                                        <svg viewBox="0 0 7 18">
-                                            <use xlink:href="img/svg/icons.svg#slider-arrow"></use>
-                                        </svg>
-                                    </div>
-                                </a>
-                            </article>
-                        </div>
-                        <div class="swiper-slide">
-                            <article class="service-card">
-                                <a href="" class="service-card__top">
-                                    <div class="service-card__img">
-                                        <img src="img/local-remont/local-remont-1.png" alt="">
-
-                                    </div>
-                                    <div class="labels">
-                                        <span class="_label _label-price">от 30 минут <label>—</label> <strong> от 1000
-                                                ₽</strong></span>
-                                    </div>
-                                </a>
-
-                                <a href="" class="service-card__bottom">
-                                    <h3>Ремонт вмятин после града в Москве и области</h3>
-                                    <button class="_btn _btn-big _btn-unfill">Подробнее</button>
-                                    <div class="next">
-                                        <svg viewBox="0 0 7 18">
-                                            <use xlink:href="img/svg/icons.svg#slider-arrow"></use>
-                                        </svg>
-                                    </div>
-                                </a>
-                            </article>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="pagination"><span class="swiper-pagination-bullet"></span><span
-                        class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span><span
-                        class="swiper-pagination-bullet"></span></div>
-
-                <div class="works-control">
-                    <button class="prev">
-                        <svg width="20" height="14" viewBox="0 0 20 14">
-                            <use xlink:href="img/svg/icons.svg#slider-arrow"></use>
-                        </svg>
-                    </button>
-                    <button class="next">
-                        <svg width="20" height="14" viewBox="0 0 20 14">
-                            <use xlink:href="img/svg/icons.svg#slider-arrow"></use>
-                        </svg>
-                    </button>
-                </div>
-
-                <a href="" class="_btn _btn-big _btn-unfill _more">
-                    <span>Все услуги</span>
-                </a>
-            </div>
-        </div>
-    </section>
 
     @@include('./html/parts/marks.html')
 
