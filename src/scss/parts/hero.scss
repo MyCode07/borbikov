@@ -40,6 +40,12 @@
         // .hero__top-left
 
         &-left {
+            flex: 1 1 auto;
+            max-width: 50%;
+
+            @media (max-width: 768px) {
+                max-width: none;
+            }
         }
 
         // .hero__top-right
@@ -157,10 +163,12 @@
 
         @media (max-width: 1024px) {
             width: 100%;
+            gap: 15px;
         }
 
         @media (max-width: 768px) {
             flex-direction: column;
+            gap: 8px;
         }
 
         button {
@@ -249,7 +257,6 @@
         }
 
         img {
-
             @media (min-width: 769px) {
                 @include adaptive-value("left", 90, -400, 1);
                 @include adaptive-value("bottom", -124, -200, 1);
@@ -462,7 +469,7 @@
         }
     }
 
-    .works-navigation {
+    .works-pagination {
         display: none;
         align-items: center;
         justify-content: space-between;

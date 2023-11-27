@@ -106,7 +106,7 @@ if (sliders.length) {
                 modules: [
                     Pagination
                 ],
-                slidesPerView: 1,
+                slidesPerView: 'auto',
                 spaceBetween: 30,
 
                 pagination: {

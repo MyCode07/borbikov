@@ -196,6 +196,10 @@
     &#calculate {
         .popup__content {
             max-width: 916px;
+
+            @media (max-width: 1200px) and (min-width: 769px) {
+                max-width: calc(100% - 124px);
+            }
         }
 
         @media (min-width: 769px) {

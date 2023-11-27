@@ -280,12 +280,6 @@
         @include adaptive-value("height", 200, 132, 1);
     }
 
-    .pagination {
-        @media (min-width: 1024px) {
-            display: none;
-        }
-    }
-
     .swiper {
         width: calc(100% + 52px);
         margin-left: -26px;
@@ -315,7 +309,7 @@
     .slider-control {
         top: 20%;
 
-        @media (max-width: 1024px) {
+        @media (max-width: 768px) {
             display: none;
         }
     }
@@ -356,6 +350,9 @@
         // .swiper-slide
 
         &-slide {
+            @media (max-width:768px){
+                max-width: 312px;
+            }
         }
     }
 
@@ -454,6 +451,7 @@
         }
 
         .pagination {
+            display: flex;
             margin-top: 0;
 
             @media (max-width: 768px) {
