@@ -92,6 +92,8 @@
         align-items: center;
         justify-content: center;
 
+        transition: padding 0.3s ease 0s;
+
         // .header__bottom-btn
 
         &-btn {
@@ -581,6 +583,7 @@
 
             .header__bottom {
                 justify-content: space-between;
+                padding: 8px 0;
             }
 
             .header__bottom-btn {

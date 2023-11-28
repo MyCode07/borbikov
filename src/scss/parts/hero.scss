@@ -187,7 +187,7 @@
     }
 }
 
-.hero-polirovka {
+.hero-page {
     @media (max-width: 768px) {
         background-position: bottom right;
         background-size: 200% 550px;
@@ -299,8 +299,18 @@
 
     .mark-logo {
         @include adaptive-value("margin-bottom", 20, 24, 1);
-        @include adaptive-value("width", 170, 160, 1);
-        @include adaptive-value("height", 104, 98, 1);
+        width: 170px;
+        height: 104px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 25px;
+
+        @media (max-width: 768px) {
+            width: 160px;
+            height: 98px;
+        }
     }
 
     h1 {
@@ -539,7 +549,7 @@
     }
 }
 
-.local-remont {
+.service-child {
     background-image: url("@img/service-page/local-bg.png");
     background-repeat: no-repeat;
     background-size: cover;
