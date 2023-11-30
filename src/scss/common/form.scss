@@ -93,6 +93,11 @@
         textarea {
             min-height: 108px;
             resize: none;
+            max-height: 126px;
+
+            @media (max-width: 768px) {
+                max-height: 108px;
+            }
         }
     }
 

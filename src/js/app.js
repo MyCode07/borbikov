@@ -19,9 +19,7 @@ accorden();
 scrollDown();
 animateAction()
 
-maskInputs('+7 999 999 999 999', '.phone')
-
-
+maskInputs('+7 (999) 999-99-99', '._phone-mask')
 
 Fancybox.bind("[data-fancybox]", {
     // Your custom options
