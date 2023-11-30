@@ -86,12 +86,19 @@ svg {
         font-size: 15px;
     }
 
+    @media (any-hover: hover) {
+        &:hover {
+            background-color: $gray;
+        }
+    }
+
     img,
     svg {
         flex: 0 0 auto;
         width: fit-content;
         margin-right: 4px;
         height: 14px;
+        width: 14px;
 
         @media (max-width: 768px) {
             margin-right: 8px;

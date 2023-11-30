@@ -15,7 +15,8 @@
         color: rgba($color: $black, $alpha: 0.8);
     }
 
-    svg {
+    svg,
+    img {
         width: 63px;
         height: 63px;
         fill: $accent;
@@ -30,6 +31,22 @@
 .service-card {
     display: flex;
     flex-direction: column;
+
+    @media (any-hover: hover) {
+        &:hover {
+            .service-card__img::after {
+                background: linear-gradient(72deg, rgba(28, 84, 199, 0.48) 20%, rgba(28, 84, 199, 0) 104.94%);
+            }
+
+            .next {
+                background-color: $white;
+
+                svg {
+                    fill: $black;
+                }
+            }
+        }
+    }
 
     // .service-card__top
 
@@ -55,7 +72,9 @@
             top: 0;
             width: 100%;
             height: 100%;
+
             background: linear-gradient(72deg, rgba(28, 84, 199, 0.48) 7.7%, rgba(28, 84, 199, 0) 104.94%);
+            transition: all 0.3s ease 0s;
         }
 
         img {
@@ -128,11 +147,24 @@
     background-color: $dark-grey;
     width: 100%;
 
+    transition: background-color 0.3s ease 0s;
+    cursor: pointer;
+
     @include adaptive-value("height", 425, 288, 1);
     @include adaptive-value("padding-top", 32, 24, 1);
     @include adaptive-value("padding-bottom", 48, 32, 1);
     @include adaptive-value("padding-left", 32, 24, 1);
     @include adaptive-value("padding-right", 32, 24, 1);
+
+    @media (any-hover: hover) {
+        &:hover {
+            background-color: #151618;
+
+            p {
+                color: $white;
+            }
+        }
+    }
 
     &:before {
         display: block;
@@ -152,7 +184,8 @@
         @include adaptive-value("width", 80, 60, 1);
         @include adaptive-value("height", 80, 60, 1);
 
-        svg {
+        svg,
+        img {
             fill: $accent;
         }
     }
@@ -167,6 +200,8 @@
         width: 100%;
         color: rgba($color: $white, $alpha: 0.8);
         font-size: 15px;
+
+        transition: color 0.3s ease 0s;
     }
 }
 
@@ -196,7 +231,8 @@
 
 .review-card {
     border-radius: 8px;
-    border: 1px solid $white;
+    border: 1px solid rgba($color: $white, $alpha: 0.6);
+    min-height: 100%;
 
     padding-bottom: 30px;
     @include adaptive-value("padding-top", 34, 24, 1);
@@ -205,6 +241,23 @@
 
     display: flex;
     flex-direction: column;
+
+    transition: all 0.3s ease 0s;
+    @media (any-hover: hover) {
+        &:hover {
+            background-color: $white;
+            color: $black;
+
+            div span {
+                color: rgba($color: $black, $alpha: 0.6);
+            }
+
+            img,
+            svg {
+                fill: rgba($color: $black, $alpha: 0.1);
+            }
+        }
+    }
 
     // .review-card__rating
 
@@ -237,6 +290,7 @@
             margin-top: 5px;
             font-size: 15px;
             color: rgba($color: $white, $alpha: 0.6);
+            transition: color 0.3s ease 0s;
         }
 
         img,
@@ -244,12 +298,15 @@
             width: 56px;
             margin-left: 10px;
             flex: 0 0 auto;
+            fill: rgba($color: $white, $alpha: 0.2);
+            transition: fill 0.3s ease 0s;
         }
     }
 }
 
 .trust-card {
     display: flex;
+    min-height: 100%;
 
     border-radius: 8px;
     border: 1px solid rgba($color: $white, $alpha: 0.6);

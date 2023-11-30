@@ -135,6 +135,13 @@
                 }
             }
 
+            &[data-open] {
+                .icon img,
+                .icon svg {
+                    transform: rotate(180deg);
+                }
+            }
+
             // .footer__menu-column-title
 
             &-title {

@@ -1,4 +1,4 @@
-import { accorden } from "./static/accordeon.js"; 
+import { accorden } from "./static/accordeon.js";
 import { maskInputs } from "./static/inputmask.js";
 import { replaceDomElements } from "./static/replace.js";
 
@@ -11,6 +11,7 @@ import "./parts/filters.js";
 import { scrollDown } from "./parts/scroll-down.js";
 import { stickyHeader } from "./parts/header.js";
 import { animateAction } from "./parts/animations.js";
+import { Fancybox } from "@fancyapps/ui";
 
 stickyHeader()
 replaceDomElements();
@@ -19,6 +20,13 @@ scrollDown();
 animateAction()
 
 maskInputs('+7 999 999 999 999', '.phone')
+
+
+
+Fancybox.bind("[data-fancybox]", {
+    // Your custom options
+});
+
 
 document.addEventListener('click', function (e) {
     let targetEl = e.target;

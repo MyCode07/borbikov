@@ -26,6 +26,14 @@ if (sliders.length) {
                 pagination: {
                     el: pagination,
                     clickable: true
+                },
+                breakpoints: {
+                    300: {
+                        centeredSlides: true
+                    },
+                    769: {
+                        centeredSlides: false
+                    }
                 }
             })
         }

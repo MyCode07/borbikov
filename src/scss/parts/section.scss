@@ -503,6 +503,7 @@
         // .swiper-slide
 
         &-slide {
+            height: auto;
             @media (max-width: 768px) {
                 max-width: 312px;
             }
@@ -533,6 +534,11 @@
 
         &-slide {
             max-width: 496px;
+            height: auto;
+
+            @media (max-width: 768px) {
+                max-width: 312px;
+            }
         }
     }
 
