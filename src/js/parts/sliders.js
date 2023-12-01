@@ -1,5 +1,5 @@
 import Swiper from 'swiper';
-import { Navigation, Pagination } from 'swiper/modules';
+import { Navigation, Pagination, Manipulation } from 'swiper/modules';
 
 const sliders = document.querySelectorAll('.swiper');
 if (sliders.length) {
@@ -17,7 +17,9 @@ if (sliders.length) {
                 loop: true,
                 slidesPerView: 'auto',
                 spaceBetween: 30,
+                watchSlidesProgress: true,
 
+               
                 navigation: {
                     prevEl: prev,
                     nextEl: next,
@@ -46,6 +48,9 @@ if (sliders.length) {
                 slidesPerView: 'auto',
                 spaceBetween: 16,
                 centeredSlides: true,
+                watchSlidesProgress: true,
+
+               
 
                 pagination: {
                     el: pagination,
@@ -71,6 +76,8 @@ if (sliders.length) {
                 loop: true,
                 slidesPerView: 1,
                 spaceBetween: 60,
+                watchSlidesProgress: true,
+               
 
                 navigation: {
                     prevEl: prev,
@@ -92,6 +99,9 @@ if (sliders.length) {
                 loop: true,
                 slidesPerView: 1,
                 spaceBetween: 30,
+                watchSlidesProgress: true,
+
+               
 
                 pagination: {
                     el: pagination,
@@ -116,6 +126,9 @@ if (sliders.length) {
                 ],
                 slidesPerView: 'auto',
                 spaceBetween: 30,
+                watchSlidesProgress: true,
+
+               
 
                 pagination: {
                     el: pagination,
@@ -139,6 +152,9 @@ if (sliders.length) {
                     Navigation, Pagination
                 ],
 
+                watchSlidesProgress: true,
+
+               
 
                 navigation: {
                     prevEl: prev,
@@ -183,6 +199,10 @@ if (sliders.length) {
                     el: pagination,
                     clickable: true
                 },
+                watchSlidesProgress: true,
+
+               
+
                 on: {
                     resize: (swiper) => {
                         if (window.innerWidth <= 768) swiper.init()
@@ -198,11 +218,12 @@ if (sliders.length) {
         else if (section.classList.contains('hero-works')) {
             new Swiper(slider, {
                 modules: [
-                    Navigation, Pagination
+                    Navigation, Pagination, Manipulation
                 ],
                 loop: true,
                 slidesPerView: 1,
                 spaceBetween: 60,
+                watchSlidesProgress: true,
 
                 navigation: {
                     prevEl: prev,
@@ -214,14 +235,12 @@ if (sliders.length) {
                     type: 'fraction',
                     clickable: true
                 },
+
                 on: {
-                    resize: (swiper) => {
-                        if (window.innerWidth <= 768) swiper.init()
-                        else swiper.destroy()
-                    },
                     init: (swiper) => {
                         if (window.innerWidth <= 768) swiper.init()
                         else swiper.destroy()
+                        console.log('init');
                     }
                 },
             })
