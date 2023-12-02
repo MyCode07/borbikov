@@ -8,11 +8,11 @@ document.addEventListener('click', function (e) {
 
 
     if (targetEl.closest('.hero-works__filter-tags') && targetEl.hasAttribute('data-tag')) {
-        document.querySelector('.hero-works__filter-title span').textContent = targetEl.textContent;
-
-        const allTags = document.querySelectorAll('[data-tag]');
-        allTags.forEach(tag => tag.classList.remove('_active'))
-
-        targetEl.classList.add('_active');
+        if (!targetEl.classList.contains('_active')) {
+            document.querySelector('.hero-works__filter-title span').textContent = targetEl.textContent;
+            const allTags = document.querySelectorAll('[data-tag]');
+            allTags.forEach(tag => tag.classList.remove('_active'))
+            targetEl.classList.add('_active');
+        }
     }
 })

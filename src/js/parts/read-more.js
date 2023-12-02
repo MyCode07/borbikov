@@ -22,4 +22,4 @@ document.addEventListener('click', function (e) {
         if (grid.classList.contains('_active')) targetEl.textContent = 'Скрыть';
         else targetEl.textContent = showText;
     }
-}) 
+})
