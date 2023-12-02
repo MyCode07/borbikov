@@ -153,7 +153,33 @@
                 <div class="section__top">
                     <div class="section__top-flex">
                         <h2 data-replace-old-position="beforeend">Оставьте ваш отзыв</h2>
-                        <img data-replace-element src="img/icons/review-stars.svg" alt="">
+                        <span class="star-rating" data-replace-element>
+                            <i class="_active">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="46" height="44" viewBox="0 0 46 44">
+                                    <use xlink:href="img/svg/icons.svg#star-rating-star" />
+                                </svg>
+                            </i>
+                            <i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="46" height="44" viewBox="0 0 46 44">
+                                    <use xlink:href="img/svg/icons.svg#star-rating-star" />
+                                </svg>
+                            </i>
+                            <i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="46" height="44" viewBox="0 0 46 44">
+                                    <use xlink:href="img/svg/icons.svg#star-rating-star" />
+                                </svg>
+                            </i>
+                            <i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="46" height="44" viewBox="0 0 46 44">
+                                    <use xlink:href="img/svg/icons.svg#star-rating-star" />
+                                </svg>
+                            </i>
+                            <i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="46" height="44" viewBox="0 0 46 44">
+                                    <use xlink:href="img/svg/icons.svg#star-rating-star" />
+                                </svg>
+                            </i>
+                        </span>
                     </div>
                     <div data-replace-new-position="beforeend">
                         <p>Поделитесь опытом посещения Bobrikov Brothers.</p>
@@ -176,16 +202,7 @@
                         <div class="form__item">
                             <textarea placeholder="Ваш отзыв..."></textarea>
                         </div>
-                        <div class="form__item">
-                            <div class="form__upload">
-                                <div>Загрузить фото</div>
-                                <span>
-                                    Перетащите файлы сюда. Размер: не более
-                                    <span class="form__upload-maxsize">20</span> MB
-                                </span>
-                                <input type="file">
-                            </div>
-                        </div>
+                        <input type="hidden" name="rating">
                     </div>
                     <div class="form__send">
                         <input type="submit" value="Отправить" class="_btn _btn-big _btn-black">
@@ -201,5 +218,3 @@
 
 @@include('./html/footer.html')
 @@include('./html/scripts.html')
-
-

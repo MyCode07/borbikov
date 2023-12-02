@@ -12,18 +12,21 @@ import { scrollDown } from "./parts/scroll-down.js";
 import { stickyHeader } from "./parts/header.js";
 import { animateAction } from "./parts/animations.js";
 import { Fancybox } from "@fancyapps/ui";
+import { starRating } from "./parts/rating.js";
 
 stickyHeader()
 replaceDomElements();
 accorden();
 scrollDown();
 animateAction()
+starRating();
 
 maskInputs('+7 (999) 999-99-99', '._phone-mask')
 
 Fancybox.bind("[data-fancybox]", {
     // Your custom options
 });
+
 
 
 document.addEventListener('click', function (e) {

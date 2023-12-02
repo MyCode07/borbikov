@@ -195,6 +195,7 @@
         margin-top: 35px;
         display: flex;
         align-items: center;
+        position: relative;
 
         input {
             cursor: pointer;
@@ -249,6 +250,31 @@
     }
 }
 
+.star-rating {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+
+    i {
+        color: $white;
+        display: block;
+        cursor: pointer;
+        flex: 0 0 auto;
+
+        &._active {
+            color: #ffc34e;
+        }
+
+        svg {
+            pointer-events: none;
+            width: 48px;
+            height: 48px;
+            fill: currentColor;
+            transition: all 0.3s ease 0s;
+        }
+    }
+}
+
 .wpcf7-response-output {
     display: none !important;
 }
@@ -271,5 +297,13 @@ form.submitting {
 }
 
 .wpcf7-spinner {
-    flex: 0 0 auto;
+    position: absolute;    
+    top: 50%;
+    transform: translate(0,-50%);
+}
+
+
+#filename{
+    margin-top: 5px;
+    word-break: break-all;
 }
