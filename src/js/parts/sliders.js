@@ -16,7 +16,7 @@ if (sliders.length) {
                 ],
                 loop: true,
                 slidesPerView: 'auto',
-                spaceBetween: 30,
+                spaceBetween: 16,
                 watchSlidesProgress: true,
 
 
@@ -31,10 +31,12 @@ if (sliders.length) {
                 },
                 breakpoints: {
                     300: {
-                        centeredSlides: true
+                        centeredSlides: true,
+                        initialSlide: 1
                     },
                     769: {
-                        centeredSlides: false
+                        centeredSlides: false,
+                        initialSlide: false
                     }
                 }
             })
@@ -49,9 +51,7 @@ if (sliders.length) {
                 spaceBetween: 16,
                 centeredSlides: true,
                 watchSlidesProgress: true,
-
-
-
+                initialSlide: 1,
                 pagination: {
                     el: pagination,
                     clickable: true
@@ -100,9 +100,7 @@ if (sliders.length) {
                 slidesPerView: 1,
                 spaceBetween: 30,
                 watchSlidesProgress: true,
-
-
-
+                initialSlide: 1,
                 pagination: {
                     el: pagination,
                     clickable: true
@@ -154,8 +152,6 @@ if (sliders.length) {
 
                 watchSlidesProgress: true,
 
-
-
                 navigation: {
                     prevEl: prev,
                     nextEl: next,
@@ -170,13 +166,15 @@ if (sliders.length) {
                     300: {
                         slidesPerView: 'auto',
                         spaceBetween: 16,
-                        centeredSlides: true
+                        centeredSlides: true,
+                        initialSlide: 1,
                     },
 
                     601: {
                         slidesPerView: 2,
                         spaceBetween: 20,
-                        centeredSlides: false
+                        centeredSlides: false,
+                        initialSlide: false,
                     },
 
                     1025: {
@@ -200,9 +198,6 @@ if (sliders.length) {
                     clickable: true
                 },
                 watchSlidesProgress: true,
-
-
-
                 on: {
                     resize: (swiper) => {
                         if (window.innerWidth <= 768) swiper.init()

@@ -286,8 +286,14 @@
         }
     }
 
-    .service-card__img {
-        @include adaptive-value("height", 200, 132, 1);
+    .service-card__top {
+        @media (min-width: 769px) {
+            padding-bottom: 50%;
+        }
+
+        @media (max-width: 768px) {
+            padding-bottom: 42.35%;
+        }
     }
 
     .swiper {
