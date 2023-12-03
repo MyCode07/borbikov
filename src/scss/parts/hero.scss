@@ -175,6 +175,7 @@
                     linear-gradient($white 0 0);
                 -webkit-mask-composite: destination-out;
                 mask-composite: exclude;
+                pointer-events:none;
             }
 
             li {

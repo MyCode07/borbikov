@@ -19,7 +19,7 @@ if (sliders.length) {
                 spaceBetween: 30,
                 watchSlidesProgress: true,
 
-               
+
                 navigation: {
                     prevEl: prev,
                     nextEl: next,
@@ -50,7 +50,7 @@ if (sliders.length) {
                 centeredSlides: true,
                 watchSlidesProgress: true,
 
-               
+
 
                 pagination: {
                     el: pagination,
@@ -77,7 +77,7 @@ if (sliders.length) {
                 slidesPerView: 1,
                 spaceBetween: 60,
                 watchSlidesProgress: true,
-               
+
 
                 navigation: {
                     prevEl: prev,
@@ -101,7 +101,7 @@ if (sliders.length) {
                 spaceBetween: 30,
                 watchSlidesProgress: true,
 
-               
+
 
                 pagination: {
                     el: pagination,
@@ -128,7 +128,7 @@ if (sliders.length) {
                 spaceBetween: 30,
                 watchSlidesProgress: true,
 
-               
+
 
                 pagination: {
                     el: pagination,
@@ -154,7 +154,7 @@ if (sliders.length) {
 
                 watchSlidesProgress: true,
 
-               
+
 
                 navigation: {
                     prevEl: prev,
@@ -201,7 +201,7 @@ if (sliders.length) {
                 },
                 watchSlidesProgress: true,
 
-               
+
 
                 on: {
                     resize: (swiper) => {
