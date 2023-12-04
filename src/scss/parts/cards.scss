@@ -231,7 +231,17 @@
 
     padding: 17px 24px 9px 24px;
 
+    @media (any-hover: hover) {
+        &:hover {
+            img {
+                filter: grayscale(0);
+            }
+        }
+    }
+
     img {
+        filter: grayscale(1);
+        transition: filter 0.3s ease 0s;
     }
 
     span {

@@ -344,6 +344,7 @@
         @include adaptive-value("margin-bottom", 20, 24, 1);
         width: 170px;
         height: 104px;
+        cursor: pointer;
 
         display: flex;
         align-items: center;
