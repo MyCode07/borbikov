@@ -49,10 +49,12 @@
 
             div {
                 display: flex;
+                margin-left: 20px;
 
                 @media (max-width: 768px) {
                     margin-top: 16px;
                     width: 100%;
+                    margin-left: 0;
                 }
 
                 & > :not(:last-child) {
@@ -770,6 +772,8 @@ section.form {
 .text {
     @include adaptive-value("margin-bottom", 100, 48, 1);
 
+    // .text-content
+
     &-content {
         font-size: 20px;
         letter-spacing: 0.02em;
@@ -816,6 +820,11 @@ section.form {
                 transition: all 0.5s ease 0s;
                 pointer-events: none;
             }
+
+            a {
+                color: $accent;
+                text-decoration: underline;
+            }
         }
     }
 
@@ -834,6 +843,11 @@ section.form {
 .text-page__content {
     & > :not(:last-child) {
         margin-bottom: 1em;
+    }
+
+    a {
+        color: $accent;
+        text-decoration: underline;
     }
 
     p,

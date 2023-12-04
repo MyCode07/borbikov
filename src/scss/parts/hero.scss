@@ -175,7 +175,7 @@
                     linear-gradient($white 0 0);
                 -webkit-mask-composite: destination-out;
                 mask-composite: exclude;
-                pointer-events:none;
+                pointer-events: none;
             }
 
             li {
@@ -195,10 +195,14 @@
         z-index: 2;
     }
 
-    .hero__btns {
+    // .hero__btns
+
+    &__btns {
         display: flex;
         align-items: center;
         gap: 20px;
+        position: relative;
+        z-index: 1;
 
         @media (max-width: 1024px) {
             width: 100%;
@@ -243,6 +247,12 @@
     .hero__btns {
         @include adaptive-value("margin-top", 50, 48, 1);
         @include adaptive-value("margin-bottom", 68, 48, 1);
+
+        ._btn {
+            @media (min-width: 769px) {
+                min-width: 235px
+            }
+        }
     }
 
     .hero__body {
@@ -591,7 +601,7 @@
 
 .service-mark {
     .hero__body {
-        @include adaptive-value("padding-top", 208, 152, 1); 
+        @include adaptive-value("padding-top", 208, 152, 1);
         @include adaptive-value("padding-bottom", 190, 78, 1);
     }
 }
