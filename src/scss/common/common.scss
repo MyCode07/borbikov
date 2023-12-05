@@ -334,7 +334,7 @@ h3 {
     opacity: 0.3;
 }
 
-.swiper-button-lock{
+.swiper-button-lock {
     opacity: 0;
 }
 
@@ -512,5 +512,42 @@ h3 {
 main {
     & > :last-child {
         margin-bottom: 0 !important;
+    }
+}
+
+.loading {
+    text-align: center;
+    width: 100%;
+    @include adaptive-value("font-size", 16, 14, 1);
+    color: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    margin-top: 1em;
+
+    span {
+        display: block;
+        border: 2px solid $accent;
+        border-radius: 50%;
+        border-top: 2px solid currentColor;
+        width: 1em;
+        height: 1em;
+        margin-left: 0.5em;
+
+        animation: spinner 2s linear infinite;
+
+        @keyframes spinner {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    }
+
+    &._hide {
+        display: none;
     }
 }
