@@ -789,10 +789,6 @@ section.form {
             position: relative;
             height: 292px;
 
-            & > :not(:last-child) {
-                margin-bottom: 1.5em;
-            }
-
             & > :last-child {
                 margin-bottom: 2em;
             }
@@ -808,11 +804,6 @@ section.form {
 
                 transition: all 0.5s ease 0s;
                 pointer-events: none;
-            }
-
-            a {
-                color: $accent;
-                text-decoration: underline;
             }
 
             &._active {
@@ -835,15 +826,43 @@ section.form {
     @include adaptive-value("padding-top", 222, 104, 1);
 }
 
-.text-content,
+.text-content__hidden,
 .text-page__content {
     & > :not(:last-child) {
-        margin-bottom: 1em;
+        margin-bottom: 15px;
+
+        @media (max-width: 768px) {
+            margin-bottom: 10px;
+        }
     }
 
     a {
         color: $accent;
         text-decoration: underline;
+    }
+
+    h2 {
+        @include adaptive-value("font-size", 30, 20, 1);
+    }
+
+    h3 {
+        @include adaptive-value("font-size", 24, 18, 1);
+    }
+
+    h4 {
+        @include adaptive-value("font-size", 20, 16, 1);
+    }
+
+    ol,
+    ul,
+    p {
+        & + h2,
+        & + h3,
+        & + h4,
+        & + h5,
+        & + h3 {
+            @include adaptive-value("margin-top", 45, 25, 1);
+        }
     }
 
     p,
@@ -859,7 +878,7 @@ section.form {
     }
 
     ul {
-        padding-left: 1.1em;
+        padding-left: 1.5em;
         list-style: unset;
 
         li {
@@ -869,7 +888,7 @@ section.form {
     }
 
     ol {
-        padding-left: 1em;
+        padding-left: 1.5em;
 
         li {
             list-style: unset;
