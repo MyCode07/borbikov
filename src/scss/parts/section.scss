@@ -841,16 +841,25 @@ section.form {
         text-decoration: underline;
     }
 
-    h2 {
-        @include adaptive-value("font-size", 30, 20, 1);
+    h2:first-child {
+        margin-bottom: 40px;
     }
 
+    // h2 - 48
+    // h3-  36
+    // h4 -30
+    // h5 -24
+
     h3 {
-        @include adaptive-value("font-size", 24, 18, 1);
+        @include adaptive-value("font-size", 36, 20, 1);
     }
 
     h4 {
-        @include adaptive-value("font-size", 20, 16, 1);
+        @include adaptive-value("font-size", 30, 18, 1);
+    }
+
+    h4 {
+        @include adaptive-value("font-size", 24, 16, 1);
     }
 
     ol,
