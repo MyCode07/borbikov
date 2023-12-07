@@ -661,6 +661,50 @@
             font-size: 15px;
             margin-top: 12px;
         }
+
+        & > :not(:last-child) {
+            margin-bottom: 15px;
+
+            @media (max-width: 768px) {
+                margin-bottom: 10px;
+            }
+        }
+
+        a {
+            color: $accent;
+            text-decoration: underline;
+        }
+
+        p,
+        ol,
+        ul,
+        strong,
+        b,
+        em,
+        i {
+            @media (max-width: 768px) {
+                font-size: 15px;
+            }
+        }
+
+        ul {
+            padding-left: 1.5em;
+            list-style: unset;
+
+            li {
+                list-style: unset;
+                list-style-type: unset;
+            }
+        }
+
+        ol {
+            padding-left: 1.5em;
+
+            li {
+                list-style: unset;
+                list-style-type: unset;
+            }
+        }
     }
 }
 

@@ -445,6 +445,10 @@ h3 {
     svg {
         fill: currentColor;
     }
+
+    &._hide{
+        display: none; 
+    }
 }
 
 .hero:has(.breadcrumbs) {
