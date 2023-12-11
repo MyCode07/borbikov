@@ -1,5 +1,4 @@
 .polirovka-dashed {
-    background-image: url("@img/dashed-bgi.png");
     background-repeat: no-repeat;
     background-size: cover;
     @include adaptive-value("margin-bottom", -50, 60, 1);
@@ -158,5 +157,13 @@
                 }
             }
         }
+    }
+
+    .section__bgi {
+        filter: blur(10px);
+        width: 120%;
+        height: 120%;
+        top: -10%;
+        left: -10%;
     }
 }

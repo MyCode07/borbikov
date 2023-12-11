@@ -1,5 +1,4 @@
 .dashed {
-    background-image: url("@img/dashed-bgi.png");
     background-repeat: no-repeat;
     background-size: cover;
     @include adaptive-value("margin-bottom", 100, 40, 1);
@@ -212,6 +211,19 @@
                 left: 50%;
                 transform: translate(-50%, -50%);
             }
+        }
+    }
+
+    .section__bgi {
+        height: 160%;
+        top: -30%;
+        filter: blur(10px);
+        width: 120%;
+        left: -10%;
+
+        @media (max-width: 768px) {
+            height: 120%;
+            top: -10%;
         }
     }
 }

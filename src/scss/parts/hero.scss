@@ -1,8 +1,8 @@
 .hero {
-    background-image: url("@img/home-bg.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom;
+    position: relative;
 
     @include adaptive-value("margin-bottom", 72, 40, 1);
 
@@ -70,6 +70,8 @@
     &__top {
         display: flex;
         margin-bottom: 37px;
+        position: relative;
+        z-index: 1;
 
         @media (max-width: 768px) {
             display: block;
@@ -250,7 +252,7 @@
 
         ._btn {
             @media (min-width: 769px) {
-                min-width: 235px
+                min-width: 235px;
             }
         }
     }
@@ -647,4 +649,3 @@
         fill: $white;
     }
 }
-
