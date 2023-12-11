@@ -387,17 +387,24 @@
     @include adaptive-value("margin-bottom", 84, 60, 1);
 
     .section__bottom {
-        display: none;
         width: 100%;
 
         @media (max-width: 768px) {
             display: block;
         }
+
+        ._btn {
+            width: 100%;
+        }
     }
 
     .grid {
-        @media (max-width: 768px) {
-            &:not(._active) {
+        &:not(._active) {
+            & > :nth-child(n + 29) {
+                display: none;
+            }
+
+            @media (max-width: 768px) {
                 & > :nth-child(n + 9) {
                     display: none;
                 }
